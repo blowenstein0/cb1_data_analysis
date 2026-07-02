@@ -27,6 +27,8 @@ def main(argv: list[str] | None = None) -> int:
                         help="extract-structured: synchronous calls instead of Batch API")
     parser.add_argument("--only", nargs="*", default=None, metavar="MEETING_ID",
                         help="extract-structured: limit to specific meeting ids")
+    parser.add_argument("--draft", metavar="MEETING_ID",
+                        help="eval: write a draft golden extraction for hand-correction")
     args = parser.parse_args(argv)
 
     if args.stage == "cost-report":
@@ -76,6 +78,21 @@ def main(argv: list[str] | None = None) -> int:
 
         run_extract_structured(Client(), sync=args.sync, only=args.only)
         return 0
+
+    if args.stage == "eval":
+        import os
+
+        from cb1.eval.run import draft_golden, run_eval
+
+        client = None
+        if os.environ.get("ANTHROPIC_API_KEY"):
+            from cb1.anthropic_client import Client
+
+            client = Client()
+        if args.draft:
+            draft_golden(args.draft, client)
+            return 0
+        return run_eval(client)
 
     print(f"stage {args.stage!r} not implemented yet (see PLAN.md build phases)")
     return 1
