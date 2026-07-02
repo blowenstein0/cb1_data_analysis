@@ -94,6 +94,12 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         return run_eval(client)
 
+    if args.stage == "load-db":
+        from cb1.db import load_db
+
+        load_db()
+        return 0
+
     print(f"stage {args.stage!r} not implemented yet (see PLAN.md build phases)")
     return 1
 

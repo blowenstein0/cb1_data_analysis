@@ -2,7 +2,9 @@
 
 RUN = uv run python -m cb1.cli
 
-all: download identify segment extract-text extract-structured load-db
+# extract-text (vision OCR of scan-front files) must precede final
+# segmentation of the scan era; segment re-runs automatically as OCR lands
+all: download identify extract-text segment extract-structured load-db
 
 download:
 	$(RUN) download
