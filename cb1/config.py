@@ -21,7 +21,17 @@ EVAL_DIR = REPO_ROOT / "eval"
 GOLDEN_DIR = EVAL_DIR / "golden"
 EVAL_CACHE_DIR = EVAL_DIR / "cache"
 
+# "bedrock" (AWS creds) or "anthropic" (ANTHROPIC_API_KEY). Default: use the
+# Anthropic API when its key is present, else Bedrock.
+BACKEND = os.environ.get(
+    "CB1_BACKEND", "anthropic" if os.environ.get("ANTHROPIC_API_KEY") else "bedrock"
+)
+AWS_REGION = os.environ.get("CB1_AWS_REGION", "us-east-1")
+
 MODEL = os.environ.get("CB1_MODEL", "claude-haiku-4-5")
+BEDROCK_MODEL_IDS = {
+    "claude-haiku-4-5": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+}
 
 # Haiku 4.5 list pricing, USD per million tokens.
 PRICE_PER_MTOK = {

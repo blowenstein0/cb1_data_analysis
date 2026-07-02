@@ -11,10 +11,23 @@ from cb1.costs import CostLedger
 
 
 class Client:
-    def __init__(self, ledger: CostLedger | None = None):
-        self._client = anthropic.Anthropic(max_retries=5)
+    def __init__(self, ledger: CostLedger | None = None, backend: str | None = None):
+        self.backend = backend or config.BACKEND
+        if self.backend == "bedrock":
+            self._client = anthropic.AnthropicBedrock(
+                aws_region=config.AWS_REGION, max_retries=5
+            )
+        else:
+            self._client = anthropic.Anthropic(max_retries=5)
         self.ledger = ledger or CostLedger()
         self.last_usage: dict = {}
+
+    def _model_id(self, model: str) -> str:
+        """Canonical model name -> backend-specific id. Ledger always gets
+        the canonical name so pricing lookups stay backend-agnostic."""
+        if self.backend == "bedrock":
+            return config.BEDROCK_MODEL_IDS[model]
+        return model
 
     def message(
         self,
@@ -29,7 +42,10 @@ class Client:
         """Synchronous call. Returns response text; logs tokens + cost."""
         self.ledger.check_budget()
         kwargs: dict = dict(
-            model=model, max_tokens=max_tokens, temperature=temperature, messages=messages
+            model=self._model_id(model),
+            max_tokens=max_tokens,
+            temperature=temperature,
+            messages=messages,
         )
         if system is not None:
             kwargs["system"] = system
@@ -56,7 +72,14 @@ class Client:
 
         `requests`: [{"custom_id": ..., "params": {...messages.create kwargs}}]
         Returns {custom_id: {"text": str|None, "usage": dict, "error": str|None}}.
+
+        Bedrock has no Message Batches API (its batch inference is an
+        S3/CreateModelInvocationJob flow — not worth the plumbing at this
+        corpus size), so on that backend this degrades to sequential
+        synchronous calls at list price.
         """
+        if self.backend == "bedrock":
+            return self._batch_sync_fallback(stage, requests)
         self.ledger.check_budget()
         batch = self._client.messages.batches.create(requests=requests)
         print(f"batch {batch.id}: {len(requests)} requests submitted")
@@ -66,6 +89,7 @@ class Client:
             c = batch.request_counts
             print(f"  {c.succeeded} ok / {c.errored} err / {c.processing} pending")
 
+        req_models = {r["custom_id"]: r["params"]["model"] for r in requests}
         out: dict = {}
         for r in self._client.messages.batches.results(batch.id):
             if r.result.type == "succeeded":
@@ -73,7 +97,7 @@ class Client:
                 u = msg.usage
                 cost = self.ledger.record(
                     stage=stage,
-                    model=msg.model,
+                    model=req_models.get(r.custom_id, config.MODEL),
                     input_tokens=u.input_tokens,
                     output_tokens=u.output_tokens,
                     cache_write_tokens=getattr(u, "cache_creation_input_tokens", 0) or 0,
@@ -92,6 +116,29 @@ class Client:
                 }
             else:
                 out[r.custom_id] = {"text": None, "usage": {}, "error": r.result.type}
+        return out
+
+    def _batch_sync_fallback(self, stage: str, requests: list[dict]) -> dict:
+        print(f"bedrock backend: running {len(requests)} requests sequentially")
+        out: dict = {}
+        for i, req in enumerate(requests, 1):
+            p = req["params"]
+            try:
+                text = self.message(
+                    stage=stage,
+                    messages=p["messages"],
+                    system=p.get("system"),
+                    max_tokens=p.get("max_tokens", 4096),
+                    temperature=p.get("temperature", 0.0),
+                    meeting=req["custom_id"],
+                    model=p.get("model", config.MODEL),
+                )
+                out[req["custom_id"]] = {
+                    "text": text, "usage": dict(self.last_usage), "error": None,
+                }
+            except anthropic.APIStatusError as e:
+                out[req["custom_id"]] = {"text": None, "usage": {}, "error": str(e)}
+            print(f"  [{i}/{len(requests)}] {req['custom_id']}")
         return out
 
 
