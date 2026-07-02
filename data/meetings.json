@@ -1,10 +1,64 @@
 {
   "meetings": {
+    "cb1-2016-01-12": {
+      "meeting_id": "cb1-2016-01-12",
+      "date": "2016-01-12",
+      "date_source": "content",
+      "date_confidence": 0.8,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/jan2016.pdf",
+          "local": "jan2016.pdf",
+          "sha256": "6c6e528c8d703dbf17b5e7221eaa39090b99c045b5316ac3cbecfdc30adcd92d",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-02-09": {
+      "meeting_id": "cb1-2016-02-09",
+      "date": "2016-02-09",
+      "date_source": "content",
+      "date_confidence": 0.8,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/feb2016.pdf",
+          "local": "feb2016.pdf",
+          "sha256": "f33d5d2370222cb6d2f1c85bab36a3ca103d503ca726594141cce5ca5fd2a0f6",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-03-08": {
+      "meeting_id": "cb1-2016-03-08",
+      "date": "2016-03-08",
+      "date_source": "content",
+      "date_confidence": 0.8,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/mar2016.pdf",
+          "local": "mar2016.pdf",
+          "sha256": "ed031aa7ec97e040a93fda224bfb872cada512af062b98fbd35219668c63bd8c",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
     "cb1-2016-04-12": {
       "meeting_id": "cb1-2016-04-12",
       "date": "2016-04-12",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -21,8 +75,8 @@
     "cb1-2016-05-10": {
       "meeting_id": "cb1-2016-05-10",
       "date": "2016-05-10",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -39,8 +93,8 @@
     "cb1-2016-06-14": {
       "meeting_id": "cb1-2016-06-14",
       "date": "2016-06-14",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -57,8 +111,8 @@
     "cb1-2016-08-09": {
       "meeting_id": "cb1-2016-08-09",
       "date": "2016-08-09",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "public_hearing",
       "is_revised": false,
       "files": [
@@ -75,8 +129,8 @@
     "cb1-2016-09-14": {
       "meeting_id": "cb1-2016-09-14",
       "date": "2016-09-14",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -93,8 +147,8 @@
     "cb1-2016-10-13": {
       "meeting_id": "cb1-2016-10-13",
       "date": "2016-10-13",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -111,8 +165,8 @@
     "cb1-2016-11-09": {
       "meeting_id": "cb1-2016-11-09",
       "date": "2016-11-09",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -129,8 +183,8 @@
     "cb1-2016-12-06": {
       "meeting_id": "cb1-2016-12-06",
       "date": "2016-12-06",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": true,
       "files": [
@@ -147,8 +201,8 @@
     "cb1-2017-01-10": {
       "meeting_id": "cb1-2017-01-10",
       "date": "2017-01-10",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -165,8 +219,8 @@
     "cb1-2017-02-15": {
       "meeting_id": "cb1-2017-02-15",
       "date": "2017-02-15",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -183,8 +237,8 @@
     "cb1-2017-03-21": {
       "meeting_id": "cb1-2017-03-21",
       "date": "2017-03-21",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -201,8 +255,8 @@
     "cb1-2017-04-19": {
       "meeting_id": "cb1-2017-04-19",
       "date": "2017-04-19",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -219,8 +273,8 @@
     "cb1-2017-05-09": {
       "meeting_id": "cb1-2017-05-09",
       "date": "2017-05-09",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -237,8 +291,8 @@
     "cb1-2017-06-06": {
       "meeting_id": "cb1-2017-06-06",
       "date": "2017-06-06",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "committee",
       "is_revised": false,
       "files": [
@@ -273,8 +327,8 @@
     "cb1-2017-09-18": {
       "meeting_id": "cb1-2017-09-18",
       "date": "2017-09-18",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -471,8 +525,8 @@
     "cb1-2018-10-09": {
       "meeting_id": "cb1-2018-10-09",
       "date": "2018-10-09",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -492,8 +546,8 @@
     "cb1-2018-11-13": {
       "meeting_id": "cb1-2018-11-13",
       "date": "2018-11-13",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -510,8 +564,8 @@
     "cb1-2018-12-11": {
       "meeting_id": "cb1-2018-12-11",
       "date": "2018-12-11",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -654,8 +708,8 @@
     "cb1-2019-10-10": {
       "meeting_id": "cb1-2019-10-10",
       "date": "2019-10-10",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -672,8 +726,8 @@
     "cb1-2019-11-12": {
       "meeting_id": "cb1-2019-11-12",
       "date": "2019-11-12",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -705,29 +759,11 @@
       ],
       "warnings": []
     },
-    "cb1-2020-01-12": {
-      "meeting_id": "cb1-2020-01-12",
-      "date": "2020-01-12",
-      "date_source": "filename",
-      "date_confidence": 0.5,
-      "meeting_type": "combined",
-      "is_revised": false,
-      "files": [
-        {
-          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_1_12_2020_with_attachments.pdf",
-          "local": "combined_public_hearing_and_board_meeting_minutes_1_12_2020_with_attachments.pdf",
-          "sha256": "9ae4653f6eb160483357f692d70bf051ffb3337767dee7c76bade53d52f0c4c3",
-          "part_no": null,
-          "is_revised": false
-        }
-      ],
-      "warnings": []
-    },
     "cb1-2020-01-14": {
       "meeting_id": "cb1-2020-01-14",
       "date": "2020-01-14",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -744,8 +780,8 @@
     "cb1-2020-02-11": {
       "meeting_id": "cb1-2020-02-11",
       "date": "2020-02-11",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -780,8 +816,8 @@
     "cb1-2020-09-08": {
       "meeting_id": "cb1-2020-09-08",
       "date": "2020-09-08",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -816,8 +852,8 @@
     "cb1-2020-11-10": {
       "meeting_id": "cb1-2020-11-10",
       "date": "2020-11-10",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -834,8 +870,8 @@
     "cb1-2020-12-08": {
       "meeting_id": "cb1-2020-12-08",
       "date": "2020-12-08",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -849,31 +885,31 @@
       ],
       "warnings": []
     },
-    "cb1-2021-01-11": {
-      "meeting_id": "cb1-2021-01-11",
-      "date": "2021-01-11",
+    "cb1-2021-01-12": {
+      "meeting_id": "cb1-2021-01-12",
+      "date": "2021-01-12",
       "date_source": "content",
-      "date_confidence": 0.9,
+      "date_confidence": 0.8,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
         {
-          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf",
-          "local": "combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf",
-          "sha256": "c324d556f689daa83f2baad018fb5f63ec40d3127f5a1b3fb39a68a8ab317470",
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_1_12_2020_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_1_12_2020_with_attachments.pdf",
+          "sha256": "9ae4653f6eb160483357f692d70bf051ffb3337767dee7c76bade53d52f0c4c3",
           "part_no": null,
           "is_revised": false
         }
       ],
       "warnings": [
-        "date mismatch: content=2021-01-11 filename=2022-01-11; using content"
+        "date mismatch: content=2021-01-12 filename=2020-01-12; using content"
       ]
     },
     "cb1-2021-02-09": {
       "meeting_id": "cb1-2021-02-09",
       "date": "2021-02-09",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -1013,6 +1049,24 @@
       ],
       "warnings": []
     },
+    "cb1-2021-11-09": {
+      "meeting_id": "cb1-2021-11-09",
+      "date": "2021-11-09",
+      "date_source": "content",
+      "date_confidence": 0.8,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/minutes-202111.pdf",
+          "local": "minutes-202111.pdf",
+          "sha256": "11097b7e75b6ef126c50d57e224b5c03ca7943283aa703a7a4d8e12eac37e9ab",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
     "cb1-2021-12-07": {
       "meeting_id": "cb1-2021-12-07",
       "date": "2021-12-07",
@@ -1030,6 +1084,26 @@
         }
       ],
       "warnings": []
+    },
+    "cb1-2022-01-11": {
+      "meeting_id": "cb1-2022-01-11",
+      "date": "2022-01-11",
+      "date_source": "override",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf",
+          "sha256": "c324d556f689daa83f2baad018fb5f63ec40d3127f5a1b3fb39a68a8ab317470",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "date overridden: Document header contains a five-digit typo year ('JANUARY 11, 20211'). Letterhead corroborates 2022: Antonio Reynoso int"
+      ]
     },
     "cb1-2022-02-08": {
       "meeting_id": "cb1-2022-02-08",
@@ -1397,8 +1471,8 @@
     "cb1-2024-01-09": {
       "meeting_id": "cb1-2024-01-09",
       "date": "2024-01-09",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -1703,8 +1777,8 @@
     "cb1-2025-05-13": {
       "meeting_id": "cb1-2025-05-13",
       "date": "2025-05-13",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": true,
       "files": [
@@ -1874,8 +1948,8 @@
     "cb1-2026-01-13": {
       "meeting_id": "cb1-2026-01-13",
       "date": "2026-01-13",
-      "date_source": "filename",
-      "date_confidence": 0.5,
+      "date_source": "content",
+      "date_confidence": 1.0,
       "meeting_type": "combined",
       "is_revised": false,
       "files": [
@@ -2082,38 +2156,5 @@
       "warnings": []
     }
   },
-  "unresolved": [
-    {
-      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/feb2016.pdf",
-      "local": "feb2016.pdf",
-      "sha256": "f33d5d2370222cb6d2f1c85bab36a3ca103d503ca726594141cce5ca5fd2a0f6",
-      "part_no": null,
-      "is_revised": false,
-      "reason": "no date from content or filename"
-    },
-    {
-      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/jan2016.pdf",
-      "local": "jan2016.pdf",
-      "sha256": "6c6e528c8d703dbf17b5e7221eaa39090b99c045b5316ac3cbecfdc30adcd92d",
-      "part_no": null,
-      "is_revised": false,
-      "reason": "no date from content or filename"
-    },
-    {
-      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/mar2016.pdf",
-      "local": "mar2016.pdf",
-      "sha256": "ed031aa7ec97e040a93fda224bfb872cada512af062b98fbd35219668c63bd8c",
-      "part_no": null,
-      "is_revised": false,
-      "reason": "no date from content or filename"
-    },
-    {
-      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/minutes-202111.pdf",
-      "local": "minutes-202111.pdf",
-      "sha256": "11097b7e75b6ef126c50d57e224b5c03ca7943283aa703a7a4d8e12eac37e9ab",
-      "part_no": null,
-      "is_revised": false,
-      "reason": "no date from content or filename"
-    }
-  ]
+  "unresolved": []
 }

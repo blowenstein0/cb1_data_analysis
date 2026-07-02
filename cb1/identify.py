@@ -17,15 +17,17 @@ from cb1 import config
 from cb1.download import load_manifest
 from cb1.grouping import MONTHS, FileRef, parse_href
 from cb1.pdf_text import is_low_density, page_texts
-from cb1.rasterize import page_png
+from cb1.rasterize import page_jpeg
 
 MONTH_ALT = (
     "january|february|march|april|may|june|july|august|september|october|"
     "november|december"
 )
 # "TUESDAY, SEPTEMBER 12, 2023" / "June 8 2021" — first date in the header
+# (?!\d) rejects five-digit typo years: "JANUARY 11, 20211" (real, in the
+# Jan 2022 minutes) must not parse as 2021 — the filename date is right there.
 CONTENT_DATE_RE = re.compile(
-    rf"({MONTH_ALT})\s+(\d{{1,2}})\s*,?\s*(\d{{4}})", re.IGNORECASE
+    rf"({MONTH_ALT})\s+(\d{{1,2}})\s*,?\s*(\d{{4}})(?!\d)", re.IGNORECASE
 )
 NUMERIC_CONTENT_DATE_RE = re.compile(r"(?<!\d)(\d{1,2})/(\d{1,2})/(\d{4})(?!\d)")
 
@@ -145,7 +147,7 @@ def identify_file(path, sha256: str, client=None) -> dict:
 def _image(path, sha256: str) -> dict:
     from cb1.anthropic_client import image_block
 
-    return image_block(page_png(path, sha256, 0))
+    return image_block(page_jpeg(path, sha256, 0))
 
 
 def _strip_fences(raw: str) -> str:
@@ -195,12 +197,25 @@ def run_identify(client=None) -> dict:
     if not manifest:
         raise SystemExit("no downloads found — run the download stage first")
 
+    overrides = {}
+    if (config.DATA_DIR / "overrides.json").exists():
+        overrides = json.loads((config.DATA_DIR / "overrides.json").read_text())
+
     meetings: dict[str, dict] = {}
     unresolved: list[dict] = []
     for href, entry in sorted(manifest.items()):
         ref = parse_href(href)
         path = config.RAW_DIR / entry["local"]
-        if ref.part_no is not None and ref.part_no >= 2 and ref.date_guess:
+        if entry["local"] in overrides:
+            ov = overrides[entry["local"]]
+            resolved = {
+                "date": ov["date"],
+                "date_source": "override",
+                "date_confidence": 1.0,
+                "meeting_type": ref.doc_type_hint if ref.doc_type_hint != "unknown" else "combined",
+                "warnings": [f"date overridden: {ov['reason'][:120]}"],
+            }
+        elif ref.part_no is not None and ref.part_no >= 2 and ref.date_guess:
             # Parts >= 2 start mid-document (no header); the filename date
             # groups them with their part 1, whose content anchors the group.
             resolved = {
@@ -210,6 +225,17 @@ def run_identify(client=None) -> dict:
                 "meeting_type": ref.doc_type_hint if ref.doc_type_hint != "unknown" else "combined",
                 "warnings": [],
             }
+        elif ref.part_no is not None and ref.part_no >= 2:
+            # Undated part >= 2 fragment: its page 1 is mid-document content,
+            # so any date found there (text OR vision) is a letter/attachment
+            # date, not the meeting date. Sibling-stem inheritance below is
+            # the only trustworthy placement.
+            unresolved.append({
+                "href": href, "local": entry["local"], "sha256": entry["sha256"],
+                "part_no": ref.part_no, "is_revised": ref.is_revised,
+                "reason": "undated fragment; awaiting sibling-stem inheritance",
+            })
+            continue
         else:
             content = identify_file(path, entry["sha256"], client=client)
             resolved = resolve_file(ref, content)

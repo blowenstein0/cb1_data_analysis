@@ -27,7 +27,7 @@ TopicCategory = Literal[
 Position = Literal["for", "against", "neutral", "unclear"]
 Severity = Literal["fatality", "critical_injury", "other"]
 TextSource = Literal["native", "embedded_ocr", "vision_ocr", "mixed"]
-DateSource = Literal["content", "filename"]
+DateSource = Literal["content", "filename", "override"]
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 

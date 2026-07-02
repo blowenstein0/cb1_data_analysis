@@ -142,12 +142,12 @@ class Client:
         return out
 
 
-def image_block(png_bytes: bytes) -> dict:
+def image_block(jpeg_bytes: bytes) -> dict:
     return {
         "type": "image",
         "source": {
             "type": "base64",
-            "media_type": "image/png",
-            "data": base64.standard_b64encode(png_bytes).decode(),
+            "media_type": "image/jpeg",
+            "data": base64.standard_b64encode(jpeg_bytes).decode(),
         },
     }

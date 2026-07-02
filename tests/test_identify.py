@@ -64,6 +64,14 @@ def test_transmittal_date_before_title_is_skipped():
     assert mtype == "combined"
 
 
+def test_five_digit_typo_year_is_rejected():
+    # real case: Jan 2022 minutes header reads "JANUARY 11, 20211"
+    d, _ = identify_from_text(
+        "COMBINED PUBLIC HEARING AND BOARD MEETING JANUARY 11, 20211 VIA WEBEX"
+    )
+    assert d is None
+
+
 def test_no_date_returns_none():
     d, mtype = identify_from_text("completely scanned page, no text layer")
     assert d is None

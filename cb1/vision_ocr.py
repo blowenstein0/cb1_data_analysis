@@ -9,7 +9,7 @@ after 3 consecutive non-body pages — so we never pay to transcribe a
 from cb1 import config
 from cb1.anthropic_client import image_block
 from cb1.pdf_text import page_texts
-from cb1.rasterize import page_png
+from cb1.rasterize import page_jpeg
 from cb1.segment import classify_page
 
 OCR_PROMPT = """Transcribe this scanned page of a NYC community board meeting minutes document.
@@ -61,7 +61,7 @@ def ocr_page(pdf_path, sha256: str, page_no: int, client) -> str:
             {
                 "role": "user",
                 "content": [
-                    image_block(page_png(pdf_path, sha256, page_no)),
+                    image_block(page_jpeg(pdf_path, sha256, page_no)),
                     {"type": "text", "text": OCR_PROMPT},
                 ],
             }
