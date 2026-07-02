@@ -23,6 +23,10 @@ STAGES = [
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="cb1", description="CB1 minutes pipeline")
     parser.add_argument("stage", choices=STAGES)
+    parser.add_argument("--sync", action="store_true",
+                        help="extract-structured: synchronous calls instead of Batch API")
+    parser.add_argument("--only", nargs="*", default=None, metavar="MEETING_ID",
+                        help="extract-structured: limit to specific meeting ids")
     args = parser.parse_args(argv)
 
     if args.stage == "cost-report":
@@ -41,6 +45,36 @@ def main(argv: list[str] | None = None) -> int:
         from cb1.identify import run_identify
 
         run_identify(client=Client())
+        return 0
+
+    if args.stage == "extract-text":
+        from cb1.anthropic_client import Client
+        from cb1.vision_ocr import run_extract_text
+
+        run_extract_text(Client())
+        return 0
+
+    if args.stage == "segment":
+        import json as _json
+
+        from cb1 import config
+        from cb1.download import load_manifest
+        from cb1.segment import segment_file
+
+        manifest = load_manifest()
+        n_body = n_flagged = 0
+        for href, e in sorted(manifest.items()):
+            seg = segment_file(config.RAW_DIR / e["local"], e["sha256"])
+            n_body += len(seg["body_pages"])
+            n_flagged += seg["needs_ocr_first"]
+        print(f"segment: {n_body} body pages; {n_flagged} files still need OCR first")
+        return 0
+
+    if args.stage == "extract-structured":
+        from cb1.anthropic_client import Client
+        from cb1.extract import run_extract_structured
+
+        run_extract_structured(Client(), sync=args.sync, only=args.only)
         return 0
 
     print(f"stage {args.stage!r} not implemented yet (see PLAN.md build phases)")
