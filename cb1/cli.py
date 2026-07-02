@@ -29,6 +29,20 @@ def main(argv: list[str] | None = None) -> int:
         print(CostLedger().report())
         return 0
 
+    if args.stage == "download":
+        from cb1.download import download_all
+        from cb1.scrape import extract_pdf_hrefs, fetch_index
+
+        download_all(extract_pdf_hrefs(fetch_index()))
+        return 0
+
+    if args.stage == "identify":
+        from cb1.anthropic_client import Client
+        from cb1.identify import run_identify
+
+        run_identify(client=Client())
+        return 0
+
     print(f"stage {args.stage!r} not implemented yet (see PLAN.md build phases)")
     return 1
 

@@ -1,0 +1,2119 @@
+{
+  "meetings": {
+    "cb1-2016-04-12": {
+      "meeting_id": "cb1-2016-04-12",
+      "date": "2016-04-12",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-4-12-16.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-4-12-16.pdf",
+          "sha256": "fe6ab9f97d5ef1b9b7caccb7a8a3a968a291ad1cbd7bb29cfe6216c26c75d8f6",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-05-10": {
+      "meeting_id": "cb1-2016-05-10",
+      "date": "2016-05-10",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-5-10-16.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-5-10-16.pdf",
+          "sha256": "89d9fb620a5f76c3214bb3f0493022bec4f5bd607dacc83737da19c803f42f5e",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-06-14": {
+      "meeting_id": "cb1-2016-06-14",
+      "date": "2016-06-14",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-6-14-16.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-6-14-16.pdf",
+          "sha256": "21a7b2fa53cdd9df572cb18f5043613663497f9425d3ebae4b20718d1bf2714b",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-08-09": {
+      "meeting_id": "cb1-2016-08-09",
+      "date": "2016-08-09",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "public_hearing",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Limited-Public-Hearing-Minutes-8-09-16.pdf",
+          "local": "Limited-Public-Hearing-Minutes-8-09-16.pdf",
+          "sha256": "89a69f73d901d229ac8e102be403df04d0056f193622a1741968af7b3e1c812d",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-09-14": {
+      "meeting_id": "cb1-2016-09-14",
+      "date": "2016-09-14",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-9-14-16.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-9-14-16.pdf",
+          "sha256": "dc64c5416a8bd52a7d81a04b8faa9cbc4c30ac7278eed3050fdf848c3169f5c3",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-10-13": {
+      "meeting_id": "cb1-2016-10-13",
+      "date": "2016-10-13",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-10-13-16.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-10-13-16.pdf",
+          "sha256": "6e234be72218e5db7c27d7b6d719213542eff3dcfbf8d25abd18730909e54255",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-11-09": {
+      "meeting_id": "cb1-2016-11-09",
+      "date": "2016-11-09",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-11-09-16.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-11-09-16.pdf",
+          "sha256": "1d0e11fbeb8b88e3748e3bf127d57f0b63591ef8318ef6617833b4ec24096b7a",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2016-12-06": {
+      "meeting_id": "cb1-2016-12-06",
+      "date": "2016-12-06",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-12-06-16-REVISED.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-12-06-16-REVISED.pdf",
+          "sha256": "7f857a4243f3a4852df1be0e455cf9c16bf6565440eca6d859a1c1935e6bbb3c",
+          "part_no": null,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-01-10": {
+      "meeting_id": "cb1-2017-01-10",
+      "date": "2017-01-10",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_mtg_minutes_1_10_17.pdf",
+          "local": "combined_public_hearing_and_board_mtg_minutes_1_10_17.pdf",
+          "sha256": "8457d3978fe04db9b384b5275b513082f8553eeae3a20eca15da598eadbb71fd",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-02-15": {
+      "meeting_id": "cb1-2017-02-15",
+      "date": "2017-02-15",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_ph_and__bd_minutes_2_15_17.pdf",
+          "local": "combined_ph_and__bd_minutes_2_15_17.pdf",
+          "sha256": "a99e95e6dd8eaaf4b498fa4fc3443ceccd2470c1fbddefd1905efed47085fcd8",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-03-21": {
+      "meeting_id": "cb1-2017-03-21",
+      "date": "2017-03-21",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_3_21_17.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_3_21_17.pdf",
+          "sha256": "527a321331448cb7a45d5fc59dbc90e61b4a67e396f77298cca7bd6e1adbf1d4",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-04-19": {
+      "meeting_id": "cb1-2017-04-19",
+      "date": "2017-04-19",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_for_april_19_2017.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_for_april_19_2017.pdf",
+          "sha256": "1b3aa1db2f1764474496388e47da71db16bd7ac94160729a3881c75d4535d407",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-05-09": {
+      "meeting_id": "cb1-2017-05-09",
+      "date": "2017-05-09",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_ph_and_bd_mtg_minutes_5_9_17.pdf",
+          "local": "combined_ph_and_bd_mtg_minutes_5_9_17.pdf",
+          "sha256": "bc258b261b36c3e789d3ea9662bbfc63a9b74f7603cdf4fa209bb2d7b2db6cef",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-06-06": {
+      "meeting_id": "cb1-2017-06-06",
+      "date": "2017-06-06",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "committee",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/land_use_committee_held_ph_6_6_17_minutes.pdf",
+          "local": "land_use_committee_held_ph_6_6_17_minutes.pdf",
+          "sha256": "466dc800abcb580006666fd8ee163b5f126386de638f8ae90304190a69e68d8b",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-06-13": {
+      "meeting_id": "cb1-2017-06-13",
+      "date": "2017-06-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_board_mtg_minutes_6_13_17_revised.pdf",
+          "local": "combined_public_hearing_board_mtg_minutes_6_13_17_revised.pdf",
+          "sha256": "e0dc9283afca2ccea494fde767033e881e544f04507bf2e2aba7185bc8ab7557",
+          "part_no": null,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-09-18": {
+      "meeting_id": "cb1-2017-09-18",
+      "date": "2017-09-18",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined ph and bd mtg minutes 9_18_17.pdf",
+          "local": "combined_ph_and_bd_mtg_minutes_9_18_17.pdf",
+          "sha256": "6738f80a9d23d92e0c77c41b4c1e877258fc7ec0bb4388bd6e740124b4708e70",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-10-17": {
+      "meeting_id": "cb1-2017-10-17",
+      "date": "2017-10-17",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined public hearing and board meeting minutes 10_17_17.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_10_17_17.pdf",
+          "sha256": "fcaba720ea593884cf25fd8cebd120e0e218743f386bc67769a2c4cc0cf66e07",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-11-14": {
+      "meeting_id": "cb1-2017-11-14",
+      "date": "2017-11-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_11_14_17_minutes_upload.pdf",
+          "local": "combined_public_hearing_and_board_meeting_11_14_17_minutes_upload.pdf",
+          "sha256": "f8328697cb44196ee6b9845254245b5d2d9d8e66424ba2a81c01ae1e8469d6de",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2017-12-05": {
+      "meeting_id": "cb1-2017-12-05",
+      "date": "2017-12-05",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_board_meeting_minutes_12_5_17.pdf",
+          "local": "combined_public_hearing_board_meeting_minutes_12_5_17.pdf",
+          "sha256": "2ef7178d6568d2c2adf81438f4162dca2e0cf1cc06058539b8c8ecd374c336bc",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-01-09": {
+      "meeting_id": "cb1-2018-01-09",
+      "date": "2018-01-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_bd_meeting_minutes_1_9_18_with_attachments.pdf",
+          "local": "combined_public_hearing_and_bd_meeting_minutes_1_9_18_with_attachments.pdf",
+          "sha256": "01565a9f6168eef5e9fe5475c33c8d674684a79ac220bc5bb777a7e0715543b7",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-02-13": {
+      "meeting_id": "cb1-2018-02-13",
+      "date": "2018-02-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_mtg_minutes__2_13_18.pdf",
+          "local": "combined_public_hearing_and_board_mtg_minutes__2_13_18.pdf",
+          "sha256": "242817cfa7033965c07a176bcc5e93876b45819cd586d42c974249ace3e0d29c",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-03-13": {
+      "meeting_id": "cb1-2018-03-13",
+      "date": "2018-03-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_3_13_18_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_3_13_18_with_attachments.pdf",
+          "sha256": "c99d842fd18c3b94a46d8873dffa5cc3e90d4eb8e4662f58cdb8534e09174623",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-04-10": {
+      "meeting_id": "cb1-2018-04-10",
+      "date": "2018-04-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_for_april_10_2018_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_for_april_10_2018_with_attachments.pdf",
+          "sha256": "81abcf8453a0cba4c03151704ef1e8eb28edd8d361249d89d69ec900e9d549cd",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-05-08": {
+      "meeting_id": "cb1-2018-05-08",
+      "date": "2018-05-08",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_mtg_minutes_5-8-18_and_the_attachments.pdf",
+          "local": "combined_public_hearing_and_board_mtg_minutes_5-8-18_and_the_attachments.pdf",
+          "sha256": "8035ac8f1e1b9e0e14bc5fe49bc67c4b19df92970182780a9df20ef447aa8e26",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-06-12": {
+      "meeting_id": "cb1-2018-06-12",
+      "date": "2018-06-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_06_12_2018.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_06_12_2018.pdf",
+          "sha256": "a40d5293cbbb65e685d0470279d24d04bb010aead7085a7c25d47c7167618ac6",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-08-14": {
+      "meeting_id": "cb1-2018-08-14",
+      "date": "2018-08-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_08_14_18.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_08_14_18.pdf",
+          "sha256": "6759cea712233635c47208af7994c9722fa427eb2e50808162465e890e351ab8",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-10-09": {
+      "meeting_id": "cb1-2018-10-09",
+      "date": "2018-10-09",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined_Public_Hearin_Board_Meeting_Minutes_10_9_18_Draft_Reduced_Size.pdf",
+          "local": "Combined_Public_Hearin_Board_Meeting_Minutes_10_9_18_Draft_Reduced_Size.pdf",
+          "sha256": "9b82f1b6ffe362ad7104f8418fae2fc2e1a3d7f977322faafc5ba296606128a3",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "date mismatch: content=2018-10-09 filename=2018-09-17; using content",
+        "duplicate part=None: Combined_Public_Hearing_Board_Meeting_Minutes_9_17_18_Draft_with_Attachments.pdf"
+      ]
+    },
+    "cb1-2018-11-13": {
+      "meeting_id": "cb1-2018-11-13",
+      "date": "2018-11-13",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_11_13_18_draft_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_11_13_18_draft_with_attachments.pdf",
+          "sha256": "27bb68088d4bc0570629b0545b54a43123d82e8097e60a53614f6f40e4b55ff6",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2018-12-11": {
+      "meeting_id": "cb1-2018-12-11",
+      "date": "2018-12-11",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_12_11_18_with_attachments_final.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_12_11_18_with_attachments_final.pdf",
+          "sha256": "8ca0ca02795f7279ea7b9f01227f0076d95e548f2d903e2713425344baef7f8b",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-01-08": {
+      "meeting_id": "cb1-2019-01-08",
+      "date": "2019-01-08",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_1_8_2019_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_1_8_2019_with_attachments.pdf",
+          "sha256": "34ccb73b16092c71a3a9cce6b5fdc29edfd59cc6cfd831e6b7eea4d260374c2e",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-02-12": {
+      "meeting_id": "cb1-2019-02-12",
+      "date": "2019-02-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_2_12_19.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_2_12_19.pdf",
+          "sha256": "de38be7b6ad2072eeff27c157049bfc5185d69749d9444027e7a9ed07d49cdc1",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-03-12": {
+      "meeting_id": "cb1-2019-03-12",
+      "date": "2019-03-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_3_12_19_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_3_12_19_with_attachments.pdf",
+          "sha256": "4f7e4319d363dd133db83a6abda698add12f81006f3cd956d34452ec9678ab58",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-04-09": {
+      "meeting_id": "cb1-2019-04-09",
+      "date": "2019-04-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_ph_and_bd_mtg_minutes_4_9_19_with_attachments.pdf",
+          "local": "combined_ph_and_bd_mtg_minutes_4_9_19_with_attachments.pdf",
+          "sha256": "45bfa5776b17b85e12239516e2e82c6f4c5b2dfa90c579dd61f52f28e42ea275",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-05-14": {
+      "meeting_id": "cb1-2019-05-14",
+      "date": "2019-05-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_5_14_19_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_5_14_19_with_attachments.pdf",
+          "sha256": "a6bd7a787f038c9567158f1aa742331e230b78b79978edd445d4a0bc30ec0a9a",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-06-11": {
+      "meeting_id": "cb1-2019-06-11",
+      "date": "2019-06-11",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_mtg_with_attachments_6_11_19.pdf",
+          "local": "combined_public_hearing_and_board_mtg_with_attachments_6_11_19.pdf",
+          "sha256": "116c47816abdf53a670a13bfdcfcf37c6326735a597207fb24536c3abcf21c8a",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-09-10": {
+      "meeting_id": "cb1-2019-09-10",
+      "date": "2019-09-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined_Public_Hearing_Board_Mtg_Minutes_9_10_19.pdf",
+          "local": "Combined_Public_Hearing_Board_Mtg_Minutes_9_10_19.pdf",
+          "sha256": "fd5e4d37d495b640b294dd14e35ba2a75fc5d3224f6aac64b27a69abd8b95f69",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-10-10": {
+      "meeting_id": "cb1-2019-10-10",
+      "date": "2019-10-10",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_10_10_19_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_10_10_19_with_attachments.pdf",
+          "sha256": "b16418b3c31bbb8f01d69c4dbb34e7d19764012b6fa5e66d00ab87e739aad647",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-11-12": {
+      "meeting_id": "cb1-2019-11-12",
+      "date": "2019-11-12",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_11_12_19.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_11_12_19.pdf",
+          "sha256": "a621a0d68c0a714975f1e22c6c04df15103a2a58273f0a9781018b7e4a94ea81",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2019-12-10": {
+      "meeting_id": "cb1-2019-12-10",
+      "date": "2019-12-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-for-12-10-19.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-for-12-10-19.pdf",
+          "sha256": "bf1cab0a650901831010bab1fa5b40bb2767b2cdc4a3f147313a69aa2e41af0a",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-01-12": {
+      "meeting_id": "cb1-2020-01-12",
+      "date": "2020-01-12",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_1_12_2020_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_1_12_2020_with_attachments.pdf",
+          "sha256": "9ae4653f6eb160483357f692d70bf051ffb3337767dee7c76bade53d52f0c4c3",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-01-14": {
+      "meeting_id": "cb1-2020-01-14",
+      "date": "2020-01-14",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_1_14_2020_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_1_14_2020_with_attachments.pdf",
+          "sha256": "1bbacf422378064d82faab27b2980c4cc600879f92eb76bb80d0d36b6498ced4",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-02-11": {
+      "meeting_id": "cb1-2020-02-11",
+      "date": "2020-02-11",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing-and-board-meeting-minutes-2-11-2020.pdf",
+          "local": "combined-public-hearing-and-board-meeting-minutes-2-11-2020.pdf",
+          "sha256": "77b3c867b11259ddb1005e46d4180b8f0019f65793f4adf92a2abf4d3b302fe6",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-06-24": {
+      "meeting_id": "cb1-2020-06-24",
+      "date": "2020-06-24",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "other",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/board_meeting_minutes_june_24_2020_with_attachments.pdf",
+          "local": "board_meeting_minutes_june_24_2020_with_attachments.pdf",
+          "sha256": "2555db29e325f16b5b1b2cc35836f7b56cb4c6d27642c3946f19ff8a22e63c3e",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-09-08": {
+      "meeting_id": "cb1-2020-09-08",
+      "date": "2020-09-08",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_9-8-2020_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_9-8-2020_with_attachments.pdf",
+          "sha256": "454b829db81dd61a0487f966ed355aa9b197bce2e07b87aa176c1fec41de07ec",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-10-13": {
+      "meeting_id": "cb1-2020-10-13",
+      "date": "2020-10-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_10_13_2020_on_letterhead_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_10_13_2020_on_letterhead_with_attachments.pdf",
+          "sha256": "f9605d66f65c02932cbf253a01c1e932011292283b2773803cfd2203c526b59a",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-11-10": {
+      "meeting_id": "cb1-2020-11-10",
+      "date": "2020-11-10",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_for_november_10_2020_with_attachments.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_for_november_10_2020_with_attachments.pdf",
+          "sha256": "07ae7792ca52a82f4e93b269bc29e93fe2bba0a937861973b4b9ddd0b4fb5d0c",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2020-12-08": {
+      "meeting_id": "cb1-2020-12-08",
+      "date": "2020-12-08",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-12-8-2020.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-12-8-2020.pdf",
+          "sha256": "4fedc38df13e2425d86d5956c658ae7e015ab95511325efd2300fa521bea795f",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-01-11": {
+      "meeting_id": "cb1-2021-01-11",
+      "date": "2021-01-11",
+      "date_source": "content",
+      "date_confidence": 0.9,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf",
+          "sha256": "c324d556f689daa83f2baad018fb5f63ec40d3127f5a1b3fb39a68a8ab317470",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "date mismatch: content=2021-01-11 filename=2022-01-11; using content"
+      ]
+    },
+    "cb1-2021-02-09": {
+      "meeting_id": "cb1-2021-02-09",
+      "date": "2021-02-09",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_bd_meeting_minutes_292021_with_signatures_attachments_and_agenda.pdf",
+          "local": "combined_public_hearing_and_bd_meeting_minutes_292021_with_signatures_attachments_and_agenda.pdf",
+          "sha256": "a452c9e10ef049feaf375685ac3604d8522ca0c09d1bc89b7312b99b26c4a4d2",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-03-09": {
+      "meeting_id": "cb1-2021-03-09",
+      "date": "2021-03-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/combined_public_hearing_and_board_meeting_minutes_3_9_2021_on_letterhead.pdf",
+          "local": "combined_public_hearing_and_board_meeting_minutes_3_9_2021_on_letterhead.pdf",
+          "sha256": "1bb765510229623898f6db852e44a86d4867b7c0e771671045c4fa66167f08b8",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-04-13": {
+      "meeting_id": "cb1-2021-04-13",
+      "date": "2021-04-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-4-13-2021.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-4-13-2021.pdf",
+          "sha256": "0e643d988a0ba14584769fb6a64ae797680d4e7667dad7f486d12abd5983601b",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-05-11": {
+      "meeting_id": "cb1-2021-05-11",
+      "date": "2021-05-11",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/minutes-20210511.pdf",
+          "local": "minutes-20210511.pdf",
+          "sha256": "486e33fa67e0c85aeed12b5be2723f458169f71bfb1c28edadc94150f949d2bc",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-06-08": {
+      "meeting_id": "cb1-2021-06-08",
+      "date": "2021-06-08",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing-and-board-meeting-minutes-june-8-2021.pdf",
+          "local": "combined-public-hearing-and-board-meeting-minutes-june-8-2021.pdf",
+          "sha256": "1b333479ba23e15766a8019850d5e2a69fcb9876cb95188e4c85cc1bf75c6274",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-07-12": {
+      "meeting_id": "cb1-2021-07-12",
+      "date": "2021-07-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing-and-board-meeting-minutes-7-12-2021.pdf",
+          "local": "combined-public-hearing-and-board-meeting-minutes-7-12-2021.pdf",
+          "sha256": "e1d2391ed5c748673281904d0430f0d918bf4fd94079b596ef37df70517cbe08",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-09-14": {
+      "meeting_id": "cb1-2021-09-14",
+      "date": "2021-09-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-9-14-2021.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-9-14-2021.pdf",
+          "sha256": "067628142bba29bcd2f0ce81dd8badc42723dcd36a866cd889537e46d7399870",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-10-12": {
+      "meeting_id": "cb1-2021-10-12",
+      "date": "2021-10-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-10-12-2021.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-10-12-2021.pdf",
+          "sha256": "0672cc8ed491f27518c6099305aad37ad1a44d58b51c811c343a5e79f8f85151",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2021-12-07": {
+      "meeting_id": "cb1-2021-12-07",
+      "date": "2021-12-07",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing-and-boardmeeting-minutes-12-7-2021.pdf",
+          "local": "combined-public-hearing-and-boardmeeting-minutes-12-7-2021.pdf",
+          "sha256": "37ed263dea1769bb9de66cd36bc54a2cfa0a013efd52323a3fd728ecf0de4d60",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-02-08": {
+      "meeting_id": "cb1-2022-02-08",
+      "date": "2022-02-08",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combine_Public_Hearing_and_Board_Meeting_Minutes_2-8-22.pdf",
+          "local": "Combine_Public_Hearing_and_Board_Meeting_Minutes_2-8-22.pdf",
+          "sha256": "354dce436b148da80ef32d377c87754fa29231126828b5d9dcd1d6e75e7061fe",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-03-08": {
+      "meeting_id": "cb1-2022-03-08",
+      "date": "2022-03-08",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-3-8-22.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-3-8-22.pdf",
+          "sha256": "e4b1349a09d8566628e0f3e3c1237d99e5a1c61d6df93fe926d411982dab7d19",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-04-12": {
+      "meeting_id": "cb1-2022-04-12",
+      "date": "2022-04-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing--Board-Meeting-Minutes-for-4-12-22-full.pdf",
+          "local": "Combined-Public-Hearing--Board-Meeting-Minutes-for-4-12-22-full.pdf",
+          "sha256": "c8913947e73c1cda8565bf42e57d42b5e3e0ffe2e9d6e1316673139035638ace",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-05-10": {
+      "meeting_id": "cb1-2022-05-10",
+      "date": "2022-05-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-agendas/Combined-Public-Hearing-and-Board-Meeting-Minutes-5-10-22.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-5-10-22.pdf",
+          "sha256": "c63975e5a193360f33da84f1f86dba61dd36676c790a674aa9d9003ff6b03dae",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-06-07": {
+      "meeting_id": "cb1-2022-06-07",
+      "date": "2022-06-07",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-6-7-22-rev.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-6-7-22-rev.pdf",
+          "sha256": "ead10904cd356c6491f7ddf62eb190699e5b02417da453edc657f28c9b6db9be",
+          "part_no": null,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-09-13": {
+      "meeting_id": "cb1-2022-09-13",
+      "date": "2022-09-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-9-13-22.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-9-13-22.pdf",
+          "sha256": "e56aa2b47db5cbe6c2a79330d07d22bd2c220894640538ca543a31f9f5aa7911",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-10-11": {
+      "meeting_id": "cb1-2022-10-11",
+      "date": "2022-10-11",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-10-11-22.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-10-11-22.pdf",
+          "sha256": "1a7620c0f6062963f058d35ba9b9598d993e366dc17b3251c81c35d1ef0ffb79",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-11-09": {
+      "meeting_id": "cb1-2022-11-09",
+      "date": "2022-11-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2022/minutes-20221109.pdf",
+          "local": "minutes-20221109.pdf",
+          "sha256": "be432dacba50c6e17c103ef6111ea9ee9962e33555557390b21803971e87cba4",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2022-12-06": {
+      "meeting_id": "cb1-2022-12-06",
+      "date": "2022-12-06",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2022/minutes-20221206.pdf",
+          "local": "minutes-20221206.pdf",
+          "sha256": "07dd2b44d7a07f44edd0d5a2e8537e61248c264f20362b228cc4b6b216622c12",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-01-10": {
+      "meeting_id": "cb1-2023-01-10",
+      "date": "2023-01-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2023/minutes-20230110.pdf",
+          "local": "minutes-20230110.pdf",
+          "sha256": "1491d4f98b301a575ad2f10cc48fc4582ddaf4293828a9aed6541a94a080df14",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-02-07": {
+      "meeting_id": "cb1-2023-02-07",
+      "date": "2023-02-07",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-2-7-23-full.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-2-7-23-full.pdf",
+          "sha256": "029073e3365f892ae960dd5a073ef27eab5772bf1546e2d80ef6a76315c8365f",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-03-14": {
+      "meeting_id": "cb1-2023-03-14",
+      "date": "2023-03-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-3-14-23.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-3-14-23.pdf",
+          "sha256": "bf4376ca2cb906abc4953447757ed30c769e69fe3527f6d2e9f04cee985001ec",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-03-21": {
+      "meeting_id": "cb1-2023-03-21",
+      "date": "2023-03-21",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "special",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2023/Special-Meeting-Select-New-District-Manager-CB1-March-21-2023-Minutes.pdf",
+          "local": "Special-Meeting-Select-New-District-Manager-CB1-March-21-2023-Minutes.pdf",
+          "sha256": "e5adbaf2924ed9466415945cdf538389bcf60c8f91c825abe026b86e1c6206d0",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-04-18": {
+      "meeting_id": "cb1-2023-04-18",
+      "date": "2023-04-18",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-4-18-23.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-4-18-23.pdf",
+          "sha256": "6c8a1af89bc80833713cbf60e80bb77548bb66f0b6056ada6fe747b7b8891db4",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-05-16": {
+      "meeting_id": "cb1-2023-05-16",
+      "date": "2023-05-16",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-5-16-23-min.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-5-16-23-min.pdf",
+          "sha256": "7c72ccab3e98f6a0950b77aaec37985409b2b045197c155e3937072623b20aae",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-06-13": {
+      "meeting_id": "cb1-2023-06-13",
+      "date": "2023-06-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "special",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-06-13-2023.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-06-13-2023.pdf",
+          "sha256": "24c2ede2da3a248fa9741223ff8faf58f33c8aceee321817d438dc753dbb95e4",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "date mismatch: content=2023-06-13 filename=2023-06-12; using content",
+        "duplicate part=None: Special-Full-Board-Minutes-6-12-23.pdf"
+      ]
+    },
+    "cb1-2023-09-12": {
+      "meeting_id": "cb1-2023-09-12",
+      "date": "2023-09-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/September-12-2023-Minutes.pdf",
+          "local": "September-12-2023-Minutes.pdf",
+          "sha256": "74d26eef4231566e0d9044629829548495211e5bc550671570c1dfdbf31bccdc",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-10-11": {
+      "meeting_id": "cb1-2023-10-11",
+      "date": "2023-10-11",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-10-11-2023.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-10-11-2023.pdf",
+          "sha256": "70816f4a95f1bb6547e6f8856b04dec102eee919ce37f26537a7064842cd81f4",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-11-14": {
+      "meeting_id": "cb1-2023-11-14",
+      "date": "2023-11-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2023/minutes-20231114.pdf",
+          "local": "minutes-20231114.pdf",
+          "sha256": "90d6c2ad70730bd6ab30c9ea08c987757b1497f2032439bff96d24c3b435390e",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2023-12-19": {
+      "meeting_id": "cb1-2023-12-19",
+      "date": "2023-12-19",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-December-19-2023-full.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-December-19-2023-full.pdf",
+          "sha256": "b2dc55a3062d0d0396332a6062016f0a1b4fbffeb913ec0f532950c6741b9d78",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-01-09": {
+      "meeting_id": "cb1-2024-01-09",
+      "date": "2024-01-09",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-01-09-2024.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-01-09-2024.pdf",
+          "sha256": "d9609d346fe5c9a5e80957f43ca0f891ebfdd6e2cf317630305ed58c78815264",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-02-13": {
+      "meeting_id": "cb1-2024-02-13",
+      "date": "2024-02-13",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-2-13-24-Minutes.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-2-13-24-Minutes.pdf",
+          "sha256": "6f440871b6f0290508fbda6ae57c2566f13442891ecaa0d968d9b16fdf31aed0",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-03-12": {
+      "meeting_id": "cb1-2024-03-12",
+      "date": "2024-03-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "public_hearing",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/03-12-24-Public-Hearing-Minutes.pdf",
+          "local": "03-12-24-Public-Hearing-Minutes.pdf",
+          "sha256": "7f491028acaba12112b8d4e628a5406c30a453042e384f338d6643ec57d77790",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-04-09": {
+      "meeting_id": "cb1-2024-04-09",
+      "date": "2024-04-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Revised-Combined-Public-hearing-and-Board-Meeting-Minutes-04-09-24.pdf",
+          "local": "Revised-Combined-Public-hearing-and-Board-Meeting-Minutes-04-09-24.pdf",
+          "sha256": "c12147b47d32ba57021ec5e73fa2706aefffb05fa86d9559cc4ad19274ccfa5e",
+          "part_no": null,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-05-14": {
+      "meeting_id": "cb1-2024-05-14",
+      "date": "2024-05-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-05-14-24.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-05-14-24.pdf",
+          "sha256": "f03e6d4d3d1fdfda93a947ebfa04bb6690363eff483c329a2f7bcb395be95d75",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-06-18": {
+      "meeting_id": "cb1-2024-06-18",
+      "date": "2024-06-18",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-and-Board-Meeting-Minutes-06-18-24.pdf",
+          "local": "Combined-Public-Hearing-and-Board-Meeting-Minutes-06-18-24.pdf",
+          "sha256": "0915339047e6994779287e183f01f25d8e7162bfd8899bed527a23a68559d317",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-09-10": {
+      "meeting_id": "cb1-2024-09-10",
+      "date": "2024-09-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-09-10-24.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-09-10-24.pdf",
+          "sha256": "0b8587168151802b763f97842f1b6ac2ba7a14dbb6c11000d0b4765bf6d86525",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-10-08": {
+      "meeting_id": "cb1-2024-10-08",
+      "date": "2024-10-08",
+      "date_source": "content",
+      "date_confidence": 0.9,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2024/Pages-from-Minutes-1.pdf",
+          "local": "Pages-from-Minutes-1.pdf",
+          "sha256": "74b01bf915e68506ea02bd8b4fe74b8ac54e484940597408e57f9c45a8046200",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2024/Pages-from-Minutes-2.pdf",
+          "local": "Pages-from-Minutes-2.pdf",
+          "sha256": "539b49a5b28b43a7fc73f0a577e189bf427549bc1e7643e53e9bb4a336aa79ed",
+          "part_no": 2,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2024/Pages-from-Minutes-3.pdf",
+          "local": "Pages-from-Minutes-3.pdf",
+          "sha256": "d722f1d314847800a76eb70fcc0393da44f5f856148394eaa05751f1ebd19da3",
+          "part_no": 3,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2024/Pages-from-Minutes-4.pdf",
+          "local": "Pages-from-Minutes-4.pdf",
+          "sha256": "245df25301d6e18d3f144beb5ab88d1cf2b45c071c879bbcf043893a9970055f",
+          "part_no": 4,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2024/Pages-from-Minutes-5.pdf",
+          "local": "Pages-from-Minutes-5.pdf",
+          "sha256": "1611a5de72ce7f1bc63c3aca953754704ea00e9e75c7071e014033e99c288a08",
+          "part_no": 5,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "Pages-from-Minutes-2.pdf: date inherited from sibling with same stem",
+        "Pages-from-Minutes-3.pdf: date inherited from sibling with same stem",
+        "Pages-from-Minutes-4.pdf: date inherited from sibling with same stem",
+        "Pages-from-Minutes-5.pdf: date inherited from sibling with same stem"
+      ]
+    },
+    "cb1-2024-11-12": {
+      "meeting_id": "cb1-2024-11-12",
+      "date": "2024-11-12",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-11-12-24-complete.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-11-12-24-complete.pdf",
+          "sha256": "7282156d921e2a5437fc77e9eb8459bf74a39f483359ac2e0785182bdbf47f85",
+          "part_no": null,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2024-12-10": {
+      "meeting_id": "cb1-2024-12-10",
+      "date": "2024-12-10",
+      "date_source": "filename",
+      "date_confidence": 0.9,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/pages-from-combined-public-hearing-board-meeting-minutes-12-10-24-1.pdf",
+          "local": "pages-from-combined-public-hearing-board-meeting-minutes-12-10-24-1.pdf",
+          "sha256": "e1562bf871ff06ec15849e43f63634a313542b85433b49370055e2cbffd248e0",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2024/Pages-from-Combined-Public-Hearing-and-Board-Meeting-Minutes-12-10-24-2.pdf",
+          "local": "Pages-from-Combined-Public-Hearing-and-Board-Meeting-Minutes-12-10-24-2.pdf",
+          "sha256": "7ca25c9d780815b1e98d9db277c003a23a6153ea4de8aa4d6d06e7557be64aae",
+          "part_no": 2,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/pages-from-combined-public-hearing-board-meeting-minutes-12-10-24-3.pdf",
+          "local": "pages-from-combined-public-hearing-board-meeting-minutes-12-10-24-3.pdf",
+          "sha256": "3ec464e32adeb7c346c6d8ce288aaf03ba040aeaaac961ed2664e5c67ee29677",
+          "part_no": 3,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-01-14": {
+      "meeting_id": "cb1-2025-01-14",
+      "date": "2025-01-14",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/Combined-Public-Hearing-Board-Meeting-Minutes-01-14-25.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-01-14-25.pdf",
+          "sha256": "6293de8526384eb145c21cd20717dce1af1c23dc4919699ea6d148b3ffd9777a",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-02-11": {
+      "meeting_id": "cb1-2025-02-11",
+      "date": "2025-02-11",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/Combined-Public-Hearing-Board-Meeting-Minutes-02-11-25.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-02-11-25.pdf",
+          "sha256": "a1205bcb2253f05002d6bdd7a98dd3491d81263c2b01ecd67464108637d0ea16",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-03-11": {
+      "meeting_id": "cb1-2025-03-11",
+      "date": "2025-03-11",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-03-11-25.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-03-11-25.pdf",
+          "sha256": "d7ebb224b921213ca375ef3d46026224f11162649103501ef31a8c48aa7671fb",
+          "part_no": null,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-04-08": {
+      "meeting_id": "cb1-2025-04-08",
+      "date": "2025-04-08",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-04-08-25-part-1.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-04-08-25-part-1.pdf",
+          "sha256": "16736e2262af3ace13ec5888f73f7fae0fd9ce9570823e17ec8f090605a6b103",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-04-08-25-part-2.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-04-08-25-part-2.pdf",
+          "sha256": "f08fdec6315610fdce129adc60396599a2b30ef7f16317a6c1eee5c155064a18",
+          "part_no": 2,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-05-13": {
+      "meeting_id": "cb1-2025-05-13",
+      "date": "2025-05-13",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/Combined-Public-Hearing-Board-Meeting-Minutes-05-13-25-Part-1.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-05-13-25-Part-1.pdf",
+          "sha256": "2fd72eca50bdfabe31f349aedf2f12b0574091c0fc456b8829a7d7bf7846d364",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-05-13-25-Part-2.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-05-13-25-Part-2.pdf",
+          "sha256": "3412f4725a4abcd154be1d3325b1d58a799e0be39c209268f0859a0ac3202696",
+          "part_no": 2,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-06-10": {
+      "meeting_id": "cb1-2025-06-10",
+      "date": "2025-06-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing--board-meeting-minutes-06-10-25-part-1.pdf",
+          "local": "combined-public-hearing--board-meeting-minutes-06-10-25-part-1.pdf",
+          "sha256": "e73d845953d7905d948206baf67e3d950533260b9caff309d2e75ea4ae711c0d",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing--board-meeting-minutes-06-10-25-part-2.pdf",
+          "local": "combined-public-hearing--board-meeting-minutes-06-10-25-part-2.pdf",
+          "sha256": "3a561fda93cc046badcfc855829d29cbd298d6209bdbb6f5d23ff7cfab0db023",
+          "part_no": 2,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing--board-meeting-minutes-06-10-25-part-3.pdf",
+          "local": "combined-public-hearing--board-meeting-minutes-06-10-25-part-3.pdf",
+          "sha256": "dff591efac6e0ff5ce8f41c103017c2623c4dea691e8b65530447116d3e472cd",
+          "part_no": 3,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/combined-public-hearing--board-meeting-minutes-06-10-25-part-4.pdf",
+          "local": "combined-public-hearing--board-meeting-minutes-06-10-25-part-4.pdf",
+          "sha256": "59db14a50f75141fe5a06ae7dba1027aae938206d931f9c781576d00022ebb93",
+          "part_no": 4,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-09-09": {
+      "meeting_id": "cb1-2025-09-09",
+      "date": "2025-09-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-09-09-25-Part-1.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-09-09-25-Part-1.pdf",
+          "sha256": "dc3f72370eecc5ae16fbebcf5dbabcc9eb18b736115bac3d04daf77c23f35776",
+          "part_no": 1,
+          "is_revised": true
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-09-09-25-Part-2.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-09-09-25-Part-2.pdf",
+          "sha256": "566391044e10a70558f1616a5d7adcd2a026048ec7e22a0d2990fd92aed7bd05",
+          "part_no": 2,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-10-21": {
+      "meeting_id": "cb1-2025-10-21",
+      "date": "2025-10-21",
+      "date_source": "filename",
+      "date_confidence": 0.9,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-1.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-1.pdf",
+          "sha256": "51e37bc5a316fe375f4572a600d7beda2b3e24973286c4d696129d39c50f168f",
+          "part_no": 1,
+          "is_revised": true
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-2.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-2.pdf",
+          "sha256": "37313e93167ab4d97bdb363d502382b60c8b185b76b6078ab32b4de5c496d003",
+          "part_no": 2,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-3.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-3.pdf",
+          "sha256": "4d0c2f7c77954c7ea1a8aa382b851a69760a3c5ad05f8f5d94c651b31ab2b0d6",
+          "part_no": 3,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-4.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-10-21-25-Part-4.pdf",
+          "sha256": "e88bcf60d427e97d2e7d2216d55df6b918bc25266dca0c77ba5e0c4ee06e92cd",
+          "part_no": 4,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-11-18": {
+      "meeting_id": "cb1-2025-11-18",
+      "date": "2025-11-18",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-11-18-25-Part-1.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-11-18-25-Part-1.pdf",
+          "sha256": "3d7675ca46d065502187c7353bfb9896001ea7e2a3bc718cd58958f2b56cb3a8",
+          "part_no": 1,
+          "is_revised": true
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-11-18-25-Part-2.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-11-18-25-Part-2.pdf",
+          "sha256": "0e4ffad0f44172deee44d48c41585da13546e685eae18d55e9fe5990099e4567",
+          "part_no": 2,
+          "is_revised": true
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2025-12-09": {
+      "meeting_id": "cb1-2025-12-09",
+      "date": "2025-12-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2025/minutes-20251209.pdf",
+          "local": "minutes-20251209.pdf",
+          "sha256": "712e22a9d6ece468e2382b856c4d3dac4372f486ad24a67b6e9418d60e402418",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-01-13": {
+      "meeting_id": "cb1-2026-01-13",
+      "date": "2026-01-13",
+      "date_source": "filename",
+      "date_confidence": 0.5,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-01-13-26.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-01-13-26.pdf",
+          "sha256": "cbf4bf5c5425aa9e36f6fb397899f41142de487541c17e07dd4c2519f36f0caa",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-01-20": {
+      "meeting_id": "cb1-2026-01-20",
+      "date": "2026-01-20",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "public_hearing",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Public-Hearing-Meeting-Minutes-01-20-26.pdf",
+          "local": "Public-Hearing-Meeting-Minutes-01-20-26.pdf",
+          "sha256": "d43d34da3979b7dbadbaa8fde38af4b35ee4df6243d171377ef70153748deeab",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-02-10": {
+      "meeting_id": "cb1-2026-02-10",
+      "date": "2026-02-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/Combined-Public-Hearing-Board-Meeting-Minutes-02-10-26.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-02-10-26.pdf",
+          "sha256": "cac62ab3ea861105d56ba95b686531a8b6d2645d8c444ff7b1b96fb44a69d086",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-03-10": {
+      "meeting_id": "cb1-2026-03-10",
+      "date": "2026-03-10",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/combined-public-hearing-board-meeting-minutes-03-10-26-part-1.pdf",
+          "local": "combined-public-hearing-board-meeting-minutes-03-10-26-part-1.pdf",
+          "sha256": "d53ee34d25a9b0125648e4fd2501507920e93817e741b6fa36893c893c1b47ad",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/combined-public-hearing-board-meeting-minutes-03-10-26-part-2.pdf",
+          "local": "combined-public-hearing-board-meeting-minutes-03-10-26-part-2.pdf",
+          "sha256": "ab999fbef14a2d4848842aebbcc3992e203890153a30896848a0564516223730",
+          "part_no": 2,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-04-14": {
+      "meeting_id": "cb1-2026-04-14",
+      "date": "2026-04-14",
+      "date_source": "filename",
+      "date_confidence": 0.9,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-04-14-26-Part-1.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-04-14-26-Part-1.pdf",
+          "sha256": "cfaab8e970d5602c8fec9ec1a2e4f3797525e69284bd2c40c1fd81abad4ef161",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-04-14-26-Part-2.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-04-14-26-Part-2.pdf",
+          "sha256": "f007336f7c0e29d21fdafb7590822146d01b24e1fee7f23b9c8995ae6341f962",
+          "part_no": 2,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing--Board-Meeting-Minutes-04-14-26-Part-3.pdf",
+          "local": "Combined-Public-Hearing--Board-Meeting-Minutes-04-14-26-Part-3.pdf",
+          "sha256": "e8efa08f3cc07f21f2937f19b5b631a828959700762364700c8a13e331d6e25e",
+          "part_no": 3,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing--Board-Meeting-Minutes-04-14-26-Part-4.pdf",
+          "local": "Combined-Public-Hearing--Board-Meeting-Minutes-04-14-26-Part-4.pdf",
+          "sha256": "b2871325c4a792924cef7419d89a8d0c84c86946e5d8ca3be7999858ea2cd77c",
+          "part_no": 4,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-05-12": {
+      "meeting_id": "cb1-2026-05-12",
+      "date": "2026-05-12",
+      "date_source": "filename",
+      "date_confidence": 0.9,
+      "meeting_type": "combined",
+      "is_revised": true,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-1.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-1.pdf",
+          "sha256": "2edac8a627f3b668516adc875a5ba88745c7278b751a410c6bfa6cf7a82379de",
+          "part_no": 1,
+          "is_revised": true
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-2.pdf",
+          "local": "REVISED-Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-2.pdf",
+          "sha256": "9f425bcb0ed88491ba9ae4aecb3bc0b148b8aaaa629f2278c87360e6d1df9de0",
+          "part_no": 2,
+          "is_revised": true
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-3.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-3.pdf",
+          "sha256": "4aec29bb534ac39e6690013abda60428f23ad96dcf65f43c7a85fc39793f61e3",
+          "part_no": 3,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-4.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-4.pdf",
+          "sha256": "9955ab69cf2c0f45ba800f70be9bf7aba80e33ebb22aeaa564b9669c8366e7d5",
+          "part_no": 4,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-5.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-05-12-26-Part-5.pdf",
+          "sha256": "dbf2d836be47638fa578bca55ff8476817fb07c66be72774e0f37dc07318f789",
+          "part_no": 5,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    },
+    "cb1-2026-06-09": {
+      "meeting_id": "cb1-2026-06-09",
+      "date": "2026-06-09",
+      "date_source": "content",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-1.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-1.pdf",
+          "sha256": "245e3d2287e8d8be57cc79d14e80912cfb7cbb92d855a8f7b63d2ec634b49954",
+          "part_no": 1,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-2.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-2.pdf",
+          "sha256": "559bf99fca68c76cd59cbd8507e74e86ee08425082662d47fb19bdaa420d4b89",
+          "part_no": 2,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-3.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-3.pdf",
+          "sha256": "632eeed2a18032d61cf19804fbd104b76270d8e7ed1f4f93bc0cdc07b1752c87",
+          "part_no": 3,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-4.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-4.pdf",
+          "sha256": "2fb2448e009b010296fe7d7041c8e364af588401e87e9a6bb5f2bb5fc158cd7a",
+          "part_no": 4,
+          "is_revised": false
+        },
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/2026/Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-5.pdf",
+          "local": "Combined-Public-Hearing-Board-Meeting-Minutes-06-09-26-Part-5.pdf",
+          "sha256": "ae01e1a5dd1be0f7a240c247339036a5196ed6a0c47dea07a3f5ad35c5dd212b",
+          "part_no": 5,
+          "is_revised": false
+        }
+      ],
+      "warnings": []
+    }
+  },
+  "unresolved": [
+    {
+      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/feb2016.pdf",
+      "local": "feb2016.pdf",
+      "sha256": "f33d5d2370222cb6d2f1c85bab36a3ca103d503ca726594141cce5ca5fd2a0f6",
+      "part_no": null,
+      "is_revised": false,
+      "reason": "no date from content or filename"
+    },
+    {
+      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/jan2016.pdf",
+      "local": "jan2016.pdf",
+      "sha256": "6c6e528c8d703dbf17b5e7221eaa39090b99c045b5316ac3cbecfdc30adcd92d",
+      "part_no": null,
+      "is_revised": false,
+      "reason": "no date from content or filename"
+    },
+    {
+      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/mar2016.pdf",
+      "local": "mar2016.pdf",
+      "sha256": "ed031aa7ec97e040a93fda224bfb872cada512af062b98fbd35219668c63bd8c",
+      "part_no": null,
+      "is_revised": false,
+      "reason": "no date from content or filename"
+    },
+    {
+      "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/minutes-202111.pdf",
+      "local": "minutes-202111.pdf",
+      "sha256": "11097b7e75b6ef126c50d57e224b5c03ca7943283aa703a7a4d8e12eac37e9ab",
+      "part_no": null,
+      "is_revised": false,
+      "reason": "no date from content or filename"
+    }
+  ]
+}
