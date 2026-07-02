@@ -1,0 +1,23 @@
+# env
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# data (regenerable / large)
+data/raw/
+data/interim/
+data/db/
+data/costs.jsonl
+data/unresolved.json
+
+# extracted JSON is kept in git? No — regenerable, but small. Ignore for now.
+data/extracted/
+
+# eval cache is regenerable; golden labels ARE tracked
+eval/cache/
+
+# local claude session state
+.claude/session-state.md
