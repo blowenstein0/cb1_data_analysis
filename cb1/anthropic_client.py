@@ -49,7 +49,10 @@ class Client:
         )
         if system is not None:
             kwargs["system"] = system
-        resp = self._client.messages.create(**kwargs)
+        # stream + collect: the SDK refuses non-streaming requests whose
+        # worst-case duration exceeds 10 minutes (max_tokens >= ~16k)
+        with self._client.messages.stream(**kwargs) as s:
+            resp = s.get_final_message()
         u = resp.usage
         cost = self.ledger.record(
             stage=stage,
