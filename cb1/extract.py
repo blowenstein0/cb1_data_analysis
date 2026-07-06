@@ -22,6 +22,7 @@ from cb1.pdf_text import page_texts
 from cb1.segment import segment_file
 
 MAX_BODY_CHARS = 350_000  # ~90k tokens; chunk above this (Haiku ctx is 200k)
+MAX_OUTPUT_TOKENS = 32_000  # license-heavy meetings overflow 16k and truncate mid-JSON
 
 SYSTEM_PROMPT = f"""You are a meticulous civic-records extraction engine. You extract structured data from Brooklyn Community Board 1 (Williamsburg/Greenpoint) meeting minutes.
 
@@ -104,7 +105,7 @@ def extract_meeting_sync(meeting: dict, client) -> MeetingExtraction:
         stage="extract",
         system=system_blocks(),
         messages=[{"role": "user", "content": user}],
-        max_tokens=16000,
+        max_tokens=MAX_OUTPUT_TOKENS,
         meeting=meeting["meeting_id"],
     )
     try:
@@ -119,7 +120,7 @@ def extract_meeting_sync(meeting: dict, client) -> MeetingExtraction:
                 {"role": "assistant", "content": raw},
                 {"role": "user", "content": retry_msg},
             ],
-            max_tokens=16000,
+            max_tokens=MAX_OUTPUT_TOKENS,
             meeting=meeting["meeting_id"],
         )
         llm = parse_llm_extraction(raw2)  # second failure raises: surfaced, not hidden
@@ -208,7 +209,7 @@ def batch_request(meeting: dict) -> dict:
         "custom_id": meeting["meeting_id"],
         "params": {
             "model": config.MODEL,
-            "max_tokens": 16000,
+            "max_tokens": MAX_OUTPUT_TOKENS,
             "temperature": 0.0,
             "system": system_blocks(),
             "messages": [
@@ -221,21 +222,44 @@ def batch_request(meeting: dict) -> dict:
 def run_extract_structured(client, sync: bool = False, only: list[str] | None = None) -> None:
     """Stage runner. Batch by default; --sync for dev/eval single meetings."""
     meetings = json.loads((config.DATA_DIR / "meetings.json").read_text())["meetings"]
-    todo = [
-        m for mid, m in sorted(meetings.items())
-        if not already_extracted(mid) and (only is None or mid in only)
-    ]
+    todo = []
+    skipped_empty = 0
+    for mid, m in sorted(meetings.items()):
+        if already_extracted(mid) or (only is not None and mid not in only):
+            continue
+        body_text, _ = build_meeting_text(m)  # cached page/segment reads
+        if not body_text.strip():
+            skipped_empty += 1  # scan-era meeting whose OCR hasn't run yet
+            continue
+        todo.append(m)
     print(f"extract-structured: {len(todo)} meetings to extract "
-          f"({len(meetings) - len(todo)} cached)")
+          f"({len(meetings) - len(todo) - skipped_empty} done, "
+          f"{skipped_empty} skipped pending OCR)")
     if not todo:
         return
 
+    if getattr(client, "backend", "") == "bedrock":
+        # The bedrock batch fallback is sequential anyway; the per-meeting
+        # sync path saves after each meeting, so an interrupted run resumes
+        # instead of losing paid results held in memory.
+        sync = True
+
     if sync:
+        failed = []
         for m in todo:
-            ex = extract_meeting_sync(m, client)
+            try:
+                ex = extract_meeting_sync(m, client)
+            except ValidationError as e:
+                # both attempts invalid (e.g. truncated JSON): keep going,
+                # report at the end instead of killing the whole run
+                failed.append(m["meeting_id"])
+                print(f"  {m['meeting_id']}: FAILED validation twice ({str(e)[:120]})")
+                continue
             save(ex, client.last_usage)
             print(f"  {m['meeting_id']}: {len(ex.votes)} votes, "
                   f"{len(ex.liquor_licenses)} licenses")
+        if failed:
+            print(f"extract-structured: {len(failed)} meetings failed: {failed}")
         return
 
     results = client.batch("extract", [batch_request(m) for m in todo])
@@ -273,7 +297,7 @@ def _sync_retry(meeting: dict, raw: str, error: ValidationError, client) -> Meet
             {"role": "assistant", "content": raw},
             {"role": "user", "content": format_validation_error(raw, error)},
         ],
-        max_tokens=16000,
+        max_tokens=MAX_OUTPUT_TOKENS,
         meeting=meeting["meeting_id"],
     )
     return finalize(meeting, parse_llm_extraction(raw2), stats)

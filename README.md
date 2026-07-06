@@ -9,8 +9,14 @@ See [PLAN.md](PLAN.md) for architecture and design decisions.
 
 ```bash
 uv sync
-cp .env.example .env   # add your ANTHROPIC_API_KEY
+cp .env.example .env
 ```
+
+LLM calls run on **Amazon Bedrock by default** (uses your AWS credentials;
+cross-region Haiku 4.5 inference profile in `us-east-1`). Set
+`ANTHROPIC_API_KEY` to use the Anthropic API directly instead — that also
+re-enables the Message Batches API (50% off the extraction pass; Bedrock
+falls back to sequential synchronous calls).
 
 ## Run
 
