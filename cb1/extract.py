@@ -249,11 +249,16 @@ def run_extract_structured(client, sync: bool = False, only: list[str] | None = 
         for m in todo:
             try:
                 ex = extract_meeting_sync(m, client)
-            except ValidationError as e:
-                # both attempts invalid (e.g. truncated JSON): keep going,
-                # report at the end instead of killing the whole run
+            except Exception as e:
+                # validation failed twice, or network trouble that survived
+                # the client's retries: skip this meeting, keep the run alive.
+                # Budget stops must still kill the run.
+                from cb1.costs import BudgetExceeded
+
+                if isinstance(e, (BudgetExceeded, KeyboardInterrupt)):
+                    raise
                 failed.append(m["meeting_id"])
-                print(f"  {m['meeting_id']}: FAILED validation twice ({str(e)[:120]})")
+                print(f"  {m['meeting_id']}: FAILED ({type(e).__name__}: {str(e)[:120]})")
                 continue
             save(ex, client.last_usage)
             print(f"  {m['meeting_id']}: {len(ex.votes)} votes, "

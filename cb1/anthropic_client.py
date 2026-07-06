@@ -5,9 +5,25 @@ import base64
 import time
 
 import anthropic
+import httpx
+from tenacity import (
+    retry,
+    retry_if_exception_type,
+    stop_after_attempt,
+    wait_exponential,
+)
 
 from cb1 import config
 from cb1.costs import CostLedger
+
+# transient network failures worth retrying; NOT 4xx API errors
+TRANSIENT = (
+    httpx.ReadTimeout,
+    httpx.ConnectError,
+    httpx.RemoteProtocolError,
+    anthropic.APIConnectionError,
+    anthropic.APITimeoutError,
+)
 
 
 class Client:
@@ -29,6 +45,12 @@ class Client:
             return config.BEDROCK_MODEL_IDS[model]
         return model
 
+    @retry(
+        retry=retry_if_exception_type(TRANSIENT),
+        stop=stop_after_attempt(4),
+        wait=wait_exponential(multiplier=2, max=60),
+        reraise=True,
+    )
     def message(
         self,
         stage: str,
