@@ -29,12 +29,16 @@ TRANSIENT = (
 class Client:
     def __init__(self, ledger: CostLedger | None = None, backend: str | None = None):
         self.backend = backend or config.BACKEND
+        # explicit read timeout: a stream that goes silent for 2 minutes
+        # (e.g. connection orphaned by a laptop sleep) must DIE and retry,
+        # not hang the pipeline for hours
+        timeout = httpx.Timeout(connect=15, read=120, write=30, pool=15)
         if self.backend == "bedrock":
             self._client = anthropic.AnthropicBedrock(
-                aws_region=config.AWS_REGION, max_retries=5
+                aws_region=config.AWS_REGION, max_retries=5, timeout=timeout
             )
         else:
-            self._client = anthropic.Anthropic(max_retries=5)
+            self._client = anthropic.Anthropic(max_retries=5, timeout=timeout)
         self.ledger = ledger or CostLedger()
         self.last_usage: dict = {}
 
