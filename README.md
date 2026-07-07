@@ -52,6 +52,12 @@ WHERE v.no > 0 ORDER BY m.date;
 Tables: `meetings`, `licenses`, `votes`, `speakers`, `incidents`, `cannabis`
 (+ parquet exports next to `data/db/cb1.duckdb`).
 
+Vote-data conventions:
+- **Voice votes** ("unanimously carried", no numeric tally in the minutes)
+  are stored as `yes=0, no=0`; filter tally analyses with `yes + no > 0`.
+- A vote can be `failed` with `yes > no`: board recommendations require a
+  majority of the appointed board, not of members voting.
+
 ## Golden labeling workflow
 
 ```bash
