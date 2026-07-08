@@ -80,15 +80,10 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.stage == "eval":
-        import os
-
+        from cb1.anthropic_client import Client
         from cb1.eval.run import draft_golden, run_eval
 
-        client = None
-        if os.environ.get("ANTHROPIC_API_KEY"):
-            from cb1.anthropic_client import Client
-
-            client = Client()
+        client = Client()  # backend resolves to bedrock or anthropic via config
         if args.draft:
             draft_golden(args.draft, client)
             return 0
