@@ -17,6 +17,7 @@ dependencies = [
 [dependency-groups]
 analysis = [
     "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.1",
     "matplotlib>=3.11.0",
     "nbconvert>=7.17.1",
     "nbformat>=5.10.4",

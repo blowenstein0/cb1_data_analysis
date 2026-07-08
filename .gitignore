@@ -22,3 +22,4 @@ eval/cache/
 # local claude session state
 .claude/session-state.md
 analysis/*.html
+.ipynb_checkpoints/
