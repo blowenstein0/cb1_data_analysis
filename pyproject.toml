@@ -23,6 +23,7 @@ analysis = [
     "nbformat>=5.10.4",
     "pandas>=3.0.3",
     "pyvis>=0.3.2",
+    "statsmodels>=0.14.6",
 ]
 dev = ["pytest>=8.3"]
 
