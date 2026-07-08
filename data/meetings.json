@@ -522,6 +522,26 @@
       ],
       "warnings": []
     },
+    "cb1-2018-09-17": {
+      "meeting_id": "cb1-2018-09-17",
+      "date": "2018-09-17",
+      "date_source": "override",
+      "date_confidence": 1.0,
+      "meeting_type": "combined",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Combined_Public_Hearing_Board_Meeting_Minutes_9_17_18_Draft_with_Attachments.pdf",
+          "local": "Combined_Public_Hearing_Board_Meeting_Minutes_9_17_18_Draft_with_Attachments.pdf",
+          "sha256": "f4f185d7a45ab58a11bd2d37915f21bfa6c7a0a6b6fbd4fcc0c7df508a6551b7",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "date overridden: Dirty embedded OCR mangles the September header date beyond parsing; first parseable page-1 date is an October reference"
+      ]
+    },
     "cb1-2018-10-09": {
       "meeting_id": "cb1-2018-10-09",
       "date": "2018-10-09",
@@ -538,10 +558,7 @@
           "is_revised": false
         }
       ],
-      "warnings": [
-        "date mismatch: content=2018-10-09 filename=2018-09-17; using content",
-        "duplicate part=None: Combined_Public_Hearing_Board_Meeting_Minutes_9_17_18_Draft_with_Attachments.pdf"
-      ]
+      "warnings": []
     },
     "cb1-2018-11-13": {
       "meeting_id": "cb1-2018-11-13",
@@ -1375,12 +1392,32 @@
       ],
       "warnings": []
     },
+    "cb1-2023-06-12": {
+      "meeting_id": "cb1-2023-06-12",
+      "date": "2023-06-12",
+      "date_source": "override",
+      "date_confidence": 1.0,
+      "meeting_type": "special",
+      "is_revised": false,
+      "files": [
+        {
+          "href": "/assets/brooklyncb1/downloads/pdf/meeting-minutes/Special-Full-Board-Minutes-6-12-23.pdf",
+          "local": "Special-Full-Board-Minutes-6-12-23.pdf",
+          "sha256": "953144c497003425946d11b7486bbdcb03a85cadda877acaf6082fc78f06180f",
+          "part_no": null,
+          "is_revised": false
+        }
+      ],
+      "warnings": [
+        "date overridden: Content identify resolved to 2023-06-13 (the next night's combined meeting, referenced in the text), colliding with the "
+      ]
+    },
     "cb1-2023-06-13": {
       "meeting_id": "cb1-2023-06-13",
       "date": "2023-06-13",
       "date_source": "content",
       "date_confidence": 1.0,
-      "meeting_type": "special",
+      "meeting_type": "combined",
       "is_revised": false,
       "files": [
         {
@@ -1391,10 +1428,7 @@
           "is_revised": false
         }
       ],
-      "warnings": [
-        "date mismatch: content=2023-06-13 filename=2023-06-12; using content",
-        "duplicate part=None: Special-Full-Board-Minutes-6-12-23.pdf"
-      ]
+      "warnings": []
     },
     "cb1-2023-09-12": {
       "meeting_id": "cb1-2023-09-12",

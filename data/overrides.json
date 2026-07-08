@@ -2,5 +2,13 @@
   "combined_public_hearing_and_board_meeting_minutes_1-11-2022.pdf": {
     "date": "2022-01-11",
     "reason": "Document header contains a five-digit typo year ('JANUARY 11, 20211'). Letterhead corroborates 2022: Antonio Reynoso introduced as the NEW Brooklyn Borough President (took office Jan 2022), Lincoln Restler listed as councilmember (seated 2022). Jan 11 was a Tuesday in 2022, a Monday in 2021, and Jan 2021's meeting (cb1-2021-01-12) already exists."
+  },
+  "Combined_Public_Hearing_Board_Meeting_Minutes_9_17_18_Draft_with_Attachments.pdf": {
+    "date": "2018-09-17",
+    "reason": "Dirty embedded OCR mangles the September header date beyond parsing; first parseable page-1 date is an October reference, causing a collision with the real 10/9/18 file and a silent drop. Filename date is corroborated by the meeting-cadence gap at Sept 2018."
+  },
+  "Special-Full-Board-Minutes-6-12-23.pdf": {
+    "date": "2023-06-12",
+    "reason": "Content identify resolved to 2023-06-13 (the next night's combined meeting, referenced in the text), colliding with the combined minutes and silently dropping this special meeting. Filename date 6-12-23 is authoritative."
   }
 }

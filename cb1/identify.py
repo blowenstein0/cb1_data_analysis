@@ -305,7 +305,13 @@ def run_identify(client=None) -> dict:
             elif not f["is_revised"] and cur["is_revised"]:
                 pass
             elif f is not cur:
+                # A same-date, same-part collision usually means content
+                # identify misread one file. NEVER drop silently: surface it.
                 m["warnings"].append(f"duplicate part={f['part_no']}: {f['local']}")
+                print(
+                    f"WARNING: {f['local']} collides with {cur['local']} at "
+                    f"{m['date']} and was DROPPED — check date, consider an override"
+                )
         m["files"] = sorted(
             by_part.values(), key=lambda f: (f["part_no"] is None, f["part_no"] or 0)
         )
