@@ -23,6 +23,13 @@ def page_jpeg(pdf_path, sha256: str, page_no: int, dpi: int = config.RASTER_DPI)
             img = pix.tobytes("jpg", jpg_quality=JPEG_QUALITY)
             if len(img) <= MAX_IMAGE_BYTES:
                 break
+        else:
+            # poster-scale pages can exceed the cap even at minimum DPI:
+            # degrade quality until they fit (guaranteed exit)
+            for q in (60, 45, 30, 20, 10):
+                img = pix.tobytes("jpg", jpg_quality=q)
+                if len(img) <= MAX_IMAGE_BYTES:
+                    break
     cache.parent.mkdir(parents=True, exist_ok=True)
     cache.write_bytes(img)
     return img
