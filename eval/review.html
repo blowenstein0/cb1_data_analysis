@@ -22,8 +22,8 @@
   input.num { width:52px; text-align:center; font-weight:600; }
   input.wide { flex:1; min-width:120px; }
   textarea { width:100%; font-size:11px; color:var(--ink2); resize:vertical; }
-  .snippet { font-size:11px; color:var(--ink2); background:#f7f6f3; border-radius:4px;
-       padding:4px 6px; margin-top:4px; white-space:pre-wrap; }
+  textarea.snippet { width:100%; font-size:11px; color:var(--ink2); background:#f7f6f3;
+       border:1px dashed var(--line); border-radius:4px; padding:4px 6px; margin-top:4px; }
   button { cursor:pointer; border:1px solid var(--line); background:white; border-radius:4px;
        padding:3px 8px; font-size:12px; }
   button.del { color:var(--warn); }
@@ -141,7 +141,8 @@ function render(){
           <button class="del">delete</button>
         </div>
         ${tmpl(rec)}
-        <div class="snippet">${esc(rec.source_snippet)}</div>`;
+        <textarea class="snippet" data-f="source_snippet" rows="2"
+          placeholder="verbatim quote from the PDF supporting this record">${esc(rec.source_snippet)}</textarea>`;
       const j = div.querySelector('.jump');
       if (j) j.onclick = () => jumpTo(rec._file || 0, rec._page);
       div.querySelector('.verify').onchange = e => { rec._verified = e.target.checked; div.classList.toggle('verified', e.target.checked); progress(); autosave(); };
@@ -172,7 +173,7 @@ function render(){
 }
 
 function blank(key){
-  const b = { source_snippet: 'ADDED BY REVIEWER — paste snippet from PDF', _verified: false };
+  const b = { source_snippet: '', _verified: false, _added: true };
   if (key==='votes') return {...b, motion_text:'', topic_category:'other', mover:null, seconder:null, yes:0,no:0,abstain:0,recusal:0, outcome:'passed', unanimous:false, conditions:[]};
   if (key==='liquor_licenses') return {...b, applicant_name:'', dba:null, address:'', application_type:'other', license_class:null, features:[], committee_recommendation:null, board_action:null};
   if (key==='public_speakers') return {...b, name:null, affiliation:null, topic:'', position:'unclear'};
