@@ -11,7 +11,7 @@
       "combined_public_hearing_and_board_meeting_minutes_2_12_19.pdf"
     ],
     "date_source": "content",
-    "date_confidence": 1,
+    "date_confidence": 1.0,
     "is_revised": false
   },
   "liquor_licenses": [
@@ -94,7 +94,7 @@
       "applicant_name": "Double Deep LLC 2",
       "dba": "Black Flamingo",
       "address": "168 Borinquen Place",
-      "application_type": "other",
+      "application_type": "renewal",
       "license_class": null,
       "features": [
         "sidewalk_cafe"
