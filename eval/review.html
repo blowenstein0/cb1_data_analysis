@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CB1 golden-set reviewer</title>
+<style>
+  :root { --ink:#0b0b0b; --ink2:#52514e; --line:#e2e1dc; --accent:#2a78d6; --warn:#e34948; --ok:#008300; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:14px/1.45 -apple-system, sans-serif; color:var(--ink); display:flex; height:100vh; }
+  #pdf { flex:1.1; border:none; border-right:2px solid var(--line); }
+  #panel { flex:1; overflow-y:auto; padding:14px 18px; }
+  h1 { font-size:16px; margin:0 0 2px; }
+  .sub { color:var(--ink2); font-size:12px; margin-bottom:10px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink2);
+       border-bottom:1px solid var(--line); padding-bottom:4px; margin:20px 0 8px; }
+  .rec { border:1px solid var(--line); border-radius:6px; padding:8px 10px; margin-bottom:8px; }
+  .rec.verified { border-color:var(--ok); background:#f4faf4; }
+  .row { display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-bottom:4px; }
+  label { font-size:11px; color:var(--ink2); }
+  input, select, textarea { font:13px -apple-system, sans-serif; border:1px solid var(--line);
+       border-radius:4px; padding:3px 6px; }
+  input.num { width:52px; text-align:center; font-weight:600; }
+  input.wide { flex:1; min-width:120px; }
+  textarea { width:100%; font-size:11px; color:var(--ink2); resize:vertical; }
+  .snippet { font-size:11px; color:var(--ink2); background:#f7f6f3; border-radius:4px;
+       padding:4px 6px; margin-top:4px; white-space:pre-wrap; }
+  button { cursor:pointer; border:1px solid var(--line); background:white; border-radius:4px;
+       padding:3px 8px; font-size:12px; }
+  button.del { color:var(--warn); }
+  button.add { color:var(--accent); margin-bottom:14px; }
+  .verify { accent-color:var(--ok); transform:scale(1.2); margin-right:4px; }
+  #savebar { position:sticky; top:0; background:white; padding:8px 0; border-bottom:2px solid var(--line);
+       display:flex; gap:10px; align-items:center; z-index:5; }
+  #progress { font-size:12px; color:var(--ink2); }
+  #save { background:var(--accent); color:white; border:none; padding:6px 14px; font-weight:600; }
+  .tallies input.num.changed { background:#fff3cd; }
+</style>
+</head>
+<body>
+<iframe id="pdf"></iframe>
+<div id="panel">
+  <div id="savebar">
+    <button id="save">Save corrected JSON</button>
+    <span id="progress"></span>
+    <span class="sub" style="margin-left:auto">⌘F in the PDF pane to find snippets</span>
+  </div>
+  <h1 id="title"></h1>
+  <div class="sub" id="filesub"></div>
+  <div id="sections"></div>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const MID = params.get('m');
+let DATA = null;
+
+const SECTIONS = [
+  ["votes", "Votes — tallies must be EXACT", rec => `
+      <div class="row tallies">
+        <input class="wide" data-f="motion_text" value="${esc(rec.motion_text)}">
+      </div>
+      <div class="row tallies">
+        <label>yes</label><input class="num" data-f="yes" value="${rec.yes}">
+        <label>no</label><input class="num" data-f="no" value="${rec.no}">
+        <label>abst</label><input class="num" data-f="abstain" value="${rec.abstain}">
+        <label>rec</label><input class="num" data-f="recusal" value="${rec.recusal}">
+        <select data-f="outcome"><option ${sel(rec.outcome,'passed')}>passed</option><option ${sel(rec.outcome,'failed')}>failed</option></select>
+        <select data-f="topic_category">${['land_use','liquor','transportation','environment','parks','budget','internal','other'].map(t=>`<option ${sel(rec.topic_category,t)}>${t}</option>`).join('')}</select>
+      </div>`],
+  ["liquor_licenses", "Liquor licenses", rec => `
+      <div class="row">
+        <input class="wide" data-f="applicant_name" value="${esc(rec.applicant_name)}" placeholder="applicant">
+        <input class="wide" data-f="address" value="${esc(rec.address)}" placeholder="address">
+      </div>
+      <div class="row">
+        <select data-f="application_type">${['new','renewal','alteration','corporate_change','transfer','other'].map(t=>`<option ${sel(rec.application_type,t)}>${t}</option>`).join('')}</select>
+        <input class="wide" data-f="committee_recommendation" value="${esc(rec.committee_recommendation)}" placeholder="committee rec">
+        <input class="wide" data-f="board_action" value="${esc(rec.board_action)}" placeholder="board action">
+      </div>`],
+  ["public_speakers", "Public speakers", rec => `
+      <div class="row">
+        <input data-f="name" value="${esc(rec.name)}" placeholder="name">
+        <select data-f="position">${['for','against','neutral','unclear'].map(t=>`<option ${sel(rec.position,t)}>${t}</option>`).join('')}</select>
+        <input class="wide" data-f="topic" value="${esc(rec.topic)}" placeholder="topic">
+      </div>`],
+  ["traffic_incidents", "Traffic incidents", rec => `
+      <div class="row">
+        <input data-f="victim_name" value="${esc(rec.victim_name)}" placeholder="victim">
+        <input class="wide" data-f="location" value="${esc(rec.location)}" placeholder="location">
+        <select data-f="severity">${['fatality','critical_injury','other'].map(t=>`<option ${sel(rec.severity,t)}>${t}</option>`).join('')}</select>
+      </div>`],
+  ["cannabis_licenses", "Cannabis", rec => `
+      <div class="row">
+        <input class="wide" data-f="applicant_name" value="${esc(rec.applicant_name)}" placeholder="applicant">
+        <input class="wide" data-f="address" value="${esc(rec.address)}" placeholder="address">
+        <input data-f="application_type" value="${esc(rec.application_type)}" placeholder="type">
+      </div>`],
+];
+
+function esc(s){ return (s ?? '').toString().replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+function sel(v,o){ return v===o ? 'selected' : ''; }
+
+async function load(){
+  const r = await fetch(`golden/${MID}.draft.json`);
+  DATA = await r.json();
+  document.getElementById('title').textContent = `${MID} — ${DATA.meeting.date} (${DATA.meeting.meeting_type})`;
+  const f = DATA.meeting.source_files[0];
+  document.getElementById('filesub').textContent = DATA.meeting.source_files.join(', ');
+  document.getElementById('pdf').src = `../data/raw/${encodeURIComponent(f)}`;
+  render();
+}
+
+function render(){
+  const root = document.getElementById('sections');
+  root.innerHTML = '';
+  for (const [key, title, tmpl] of SECTIONS){
+    const recs = DATA[key] || [];
+    const h = document.createElement('h2');
+    h.textContent = `${title} (${recs.length})`;
+    root.appendChild(h);
+    recs.forEach((rec, i) => {
+      const div = document.createElement('div');
+      div.className = 'rec' + (rec._verified ? ' verified' : '');
+      div.innerHTML = `
+        <div class="row">
+          <input type="checkbox" class="verify" ${rec._verified?'checked':''} title="verified against PDF">
+          <span style="flex:1"></span>
+          <button class="del">delete</button>
+        </div>
+        ${tmpl(rec)}
+        <div class="snippet">${esc(rec.source_snippet)}</div>`;
+      div.querySelector('.verify').onchange = e => { rec._verified = e.target.checked; div.classList.toggle('verified', e.target.checked); progress(); };
+      div.querySelector('.del').onclick = () => { recs.splice(i,1); render(); };
+      div.querySelectorAll('[data-f]').forEach(inp => {
+        inp.onchange = () => {
+          const f = inp.dataset.f;
+          rec[f] = inp.classList.contains('num') ? parseInt(inp.value||'0',10) : (inp.value || null);
+          if (inp.classList.contains('num')) inp.classList.add('changed');
+        };
+      });
+      root.appendChild(div);
+    });
+    const add = document.createElement('button');
+    add.className = 'add';
+    add.textContent = `+ add missed record`;
+    add.onclick = () => { recs.push(blank(key)); render(); };
+    root.appendChild(add);
+  }
+  progress();
+}
+
+function blank(key){
+  const b = { source_snippet: 'ADDED BY REVIEWER — paste snippet from PDF', _verified: false };
+  if (key==='votes') return {...b, motion_text:'', topic_category:'other', mover:null, seconder:null, yes:0,no:0,abstain:0,recusal:0, outcome:'passed', unanimous:false, conditions:[]};
+  if (key==='liquor_licenses') return {...b, applicant_name:'', dba:null, address:'', application_type:'other', license_class:null, features:[], committee_recommendation:null, board_action:null};
+  if (key==='public_speakers') return {...b, name:null, affiliation:null, topic:'', position:'unclear'};
+  if (key==='traffic_incidents') return {...b, victim_name:null, incident_date:null, location:'', severity:'other'};
+  return {...b, applicant_name:'', address:'', application_type:'other'};
+}
+
+function progress(){
+  let tot=0, ver=0;
+  for (const [key] of SECTIONS){ (DATA[key]||[]).forEach(r => { tot++; if (r._verified) ver++; }); }
+  document.getElementById('progress').textContent = `${ver}/${tot} records verified`;
+}
+
+document.getElementById('save').onclick = async () => {
+  const out = JSON.parse(JSON.stringify(DATA));
+  for (const [key] of SECTIONS) (out[key]||[]).forEach(r => delete r._verified);
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
+  if (window.showSaveFilePicker){
+    const h = await showSaveFilePicker({suggestedName: `${MID}.json`,
+      types:[{description:'JSON', accept:{'application/json':['.json']}}]});
+    const w = await h.createWritable(); await w.write(blob); await w.close();
+  } else {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = `${MID}.json`; a.click();
+  }
+  alert(`Saved. Move it to eval/golden/${MID}.json if it isn't there already, then run: make eval`);
+};
+
+load();
+</script>
+</body>
+</html>
