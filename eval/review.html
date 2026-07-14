@@ -101,7 +101,7 @@ function esc(s){ return (s ?? '').toString().replace(/&/g,'&amp;').replace(/"/g,
 function sel(v,o){ return v===o ? 'selected' : ''; }
 
 async function load(){
-  const r = await fetch(`golden/${MID}.draft.json`);
+  const r = await fetch(`golden/${MID}.draft.json?t=${Date.now()}`, {cache: 'no-store'});
   DATA = await r.json();
   document.getElementById('title').textContent = `${MID} — ${DATA.meeting.date} (${DATA.meeting.meeting_type})`;
   const f = DATA.meeting.source_files[0];
