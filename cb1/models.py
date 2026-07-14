@@ -88,6 +88,18 @@ class PublicSpeaker(BaseModel):
     source_snippet: str
 
 
+class GovernmentAnnouncement(BaseModel):
+    """Officials/agency staff addressing the board outside the public
+    session. Separate from public_speakers (community testimony only).
+    Pipeline extracts this from schema v1.1 onward; golden sets carry it
+    from v1.0."""
+
+    name: str | None = None
+    affiliation: str | None = None
+    topic: str
+    source_snippet: str
+
+
 class TrafficIncident(BaseModel):
     victim_name: str | None = None
     incident_date: str | None = None
@@ -123,6 +135,7 @@ class MeetingExtraction(BaseModel):
     public_speakers: list[PublicSpeaker] = Field(default_factory=list)
     traffic_incidents: list[TrafficIncident] = Field(default_factory=list)
     cannabis_licenses: list[CannabisLicense] = Field(default_factory=list)
+    government_announcements: list[GovernmentAnnouncement] = Field(default_factory=list)
     extraction_meta: ExtractionMeta
 
 
@@ -135,6 +148,7 @@ class LLMExtraction(BaseModel):
     public_speakers: list[PublicSpeaker] = Field(default_factory=list)
     traffic_incidents: list[TrafficIncident] = Field(default_factory=list)
     cannabis_licenses: list[CannabisLicense] = Field(default_factory=list)
+    government_announcements: list[GovernmentAnnouncement] = Field(default_factory=list)
 
 
 def format_validation_error(raw: str, error: Exception) -> str:

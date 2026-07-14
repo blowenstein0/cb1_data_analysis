@@ -92,6 +92,12 @@ const SECTIONS = [
         <input class="wide" data-f="location" value="${esc(rec.location)}" placeholder="location">
         <select data-f="severity">${['fatality','critical_injury','other'].map(t=>`<option ${sel(rec.severity,t)}>${t}</option>`).join('')}</select>
       </div>`],
+  ["government_announcements", "Government announcements (NOT public testimony)", rec => `
+      <div class="row">
+        <input data-f="name" value="${esc(rec.name)}" placeholder="name">
+        <input class="wide" data-f="affiliation" value="${esc(rec.affiliation)}" placeholder="office/agency">
+        <input class="wide" data-f="topic" value="${esc(rec.topic)}" placeholder="topic">
+      </div>`],
   ["cannabis_licenses", "Cannabis", rec => `
       <div class="row">
         <input class="wide" data-f="applicant_name" value="${esc(rec.applicant_name)}" placeholder="applicant">
@@ -177,6 +183,7 @@ function blank(key){
   if (key==='votes') return {...b, motion_text:'', topic_category:'other', mover:null, seconder:null, yes:0,no:0,abstain:0,recusal:0, outcome:'passed', unanimous:false, conditions:[]};
   if (key==='liquor_licenses') return {...b, applicant_name:'', dba:null, address:'', application_type:'other', license_class:null, features:[], committee_recommendation:null, board_action:null};
   if (key==='public_speakers') return {...b, name:null, affiliation:null, topic:'', position:'unclear'};
+  if (key==='government_announcements') return {...b, name:null, affiliation:null, topic:''};
   if (key==='traffic_incidents') return {...b, victim_name:null, incident_date:null, location:'', severity:'other'};
   return {...b, applicant_name:'', address:'', application_type:'other'};
 }
