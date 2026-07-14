@@ -130,7 +130,7 @@ function render(){
   const root = document.getElementById('sections');
   root.innerHTML = '';
   for (const [key, title, tmpl] of SECTIONS){
-    const recs = DATA[key] || [];
+    const recs = DATA[key] || (DATA[key] = []);  // attach missing sections so adds persist
     const h = document.createElement('h2');
     h.textContent = `${title} (${recs.length})`;
     root.appendChild(h);
