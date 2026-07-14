@@ -29,6 +29,9 @@
   button.del { color:var(--warn); }
   button.add { color:var(--accent); margin-bottom:14px; }
   .verify { accent-color:var(--ok); transform:scale(1.2); margin-right:4px; }
+  .vlabel { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--ink2); cursor:pointer; }
+  .rec.edited { border-color:#eda100; background:#fffdf4; }
+  .editedtag { font-size:11px; color:#b57d00; font-weight:600; }
   #savebar { position:sticky; top:0; background:white; padding:8px 0; border-bottom:2px solid var(--line);
        display:flex; gap:10px; align-items:center; z-index:5; }
   #progress { font-size:12px; color:var(--ink2); }
@@ -42,7 +45,7 @@
   <div id="savebar">
     <button id="save">Save corrected JSON</button>
     <span id="progress"></span>
-    <span class="sub" style="margin-left:auto">⌘F in the PDF pane to find snippets</span>
+    <span class="sub" style="margin-left:auto">tick = compared to the PDF and correct — tick even if you didn't edit · ⌘F in the PDF to search</span>
   </div>
   <h1 id="title"></h1>
   <div class="sub" id="filesub"></div>
@@ -127,10 +130,12 @@ function render(){
     root.appendChild(h);
     recs.forEach((rec, i) => {
       const div = document.createElement('div');
-      div.className = 'rec' + (rec._verified ? ' verified' : '');
+      div.className = 'rec' + (rec._verified ? ' verified' : (rec._edited ? ' edited' : ''));
       div.innerHTML = `
         <div class="row">
-          <input type="checkbox" class="verify" ${rec._verified?'checked':''} title="verified against PDF">
+          <label class="vlabel"><input type="checkbox" class="verify" ${rec._verified?'checked':''}>
+            checked against PDF</label>
+          ${rec._edited && !rec._verified ? '<span class="editedtag">edited — needs check</span>' : ''}
           ${rec._page ? `<button class="jump">&rarr; p.${rec._page}</button>` : ''}
           <span style="flex:1"></span>
           <button class="del">delete</button>
@@ -146,6 +151,12 @@ function render(){
           const f = inp.dataset.f;
           rec[f] = inp.classList.contains('num') ? parseInt(inp.value||'0',10) : (inp.value || null);
           if (inp.classList.contains('num')) inp.classList.add('changed');
+          if (!rec._verified && !rec._edited){
+            rec._edited = true; div.classList.add('edited');
+            const tag = document.createElement('span');
+            tag.className = 'editedtag'; tag.textContent = 'edited — needs check';
+            div.querySelector('.vlabel').after(tag);
+          }
           autosave();
         };
       });
@@ -176,6 +187,9 @@ function progress(){
 }
 
 document.getElementById('save').onclick = async () => {
+  let unticked = 0;
+  for (const [key] of SECTIONS) (DATA[key]||[]).forEach(r => { if (!r._verified) unticked++; });
+  if (unticked > 0 && !confirm(`${unticked} records were never checked against the PDF. A finished golden set should be 100% checked.\n\nSave anyway (as work-in-progress)?`)) return;
   const out = JSON.parse(JSON.stringify(DATA));
   for (const [key] of SECTIONS) (out[key]||[]).forEach(r => {
     for (const f of Object.keys(r)) if (f.startsWith('_')) delete r[f];
