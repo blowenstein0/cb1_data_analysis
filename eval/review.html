@@ -186,10 +186,11 @@ document.getElementById('save').onclick = async () => {
 
 function jumpTo(fileIdx, page){
   const f = DATA.meeting.source_files[fileIdx] || DATA.meeting.source_files[0];
-  const url = `../data/raw/${encodeURIComponent(f)}#page=${page}`;
-  const frame = document.getElementById('pdf');
-  try { frame.contentWindow.location.replace(url); }
-  catch (e) { frame.src = url; }
+  // absolute URL + per-page query: fragment-only changes don't renavigate
+  // Chrome's PDF viewer, and relative paths resolve wrongly in its frame
+  const url = new URL(`../data/raw/${encodeURIComponent(f)}`, location.href).href
+            + `?v=${page}#page=${page}`;
+  document.getElementById('pdf').src = url;
 }
 
 load();
