@@ -124,11 +124,14 @@ function render(){
       div.innerHTML = `
         <div class="row">
           <input type="checkbox" class="verify" ${rec._verified?'checked':''} title="verified against PDF">
+          ${rec._page ? `<button class="jump">&rarr; p.${rec._page}</button>` : ''}
           <span style="flex:1"></span>
           <button class="del">delete</button>
         </div>
         ${tmpl(rec)}
         <div class="snippet">${esc(rec.source_snippet)}</div>`;
+      const j = div.querySelector('.jump');
+      if (j) j.onclick = () => jumpTo(rec._file || 0, rec._page);
       div.querySelector('.verify').onchange = e => { rec._verified = e.target.checked; div.classList.toggle('verified', e.target.checked); progress(); };
       div.querySelector('.del').onclick = () => { recs.splice(i,1); render(); };
       div.querySelectorAll('[data-f]').forEach(inp => {
@@ -166,7 +169,9 @@ function progress(){
 
 document.getElementById('save').onclick = async () => {
   const out = JSON.parse(JSON.stringify(DATA));
-  for (const [key] of SECTIONS) (out[key]||[]).forEach(r => delete r._verified);
+  for (const [key] of SECTIONS) (out[key]||[]).forEach(r => {
+    for (const f of Object.keys(r)) if (f.startsWith('_')) delete r[f];
+  });
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
   if (window.showSaveFilePicker){
     const h = await showSaveFilePicker({suggestedName: `${MID}.json`,
@@ -178,6 +183,14 @@ document.getElementById('save').onclick = async () => {
   }
   alert(`Saved. Move it to eval/golden/${MID}.json if it isn't there already, then run: make eval`);
 };
+
+function jumpTo(fileIdx, page){
+  const f = DATA.meeting.source_files[fileIdx] || DATA.meeting.source_files[0];
+  const url = `../data/raw/${encodeURIComponent(f)}#page=${page}`;
+  const frame = document.getElementById('pdf');
+  try { frame.contentWindow.location.replace(url); }
+  catch (e) { frame.src = url; }
+}
 
 load();
 </script>
