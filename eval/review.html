@@ -100,9 +100,16 @@ const SECTIONS = [
 function esc(s){ return (s ?? '').toString().replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
 function sel(v,o){ return v===o ? 'selected' : ''; }
 
+const LSKEY = `cb1-review-${MID}`;
+function autosave(){ try { localStorage.setItem(LSKEY, JSON.stringify(DATA)); } catch(e){} }
+
 async function load(){
   const r = await fetch(`golden/${MID}.draft.json?t=${Date.now()}`, {cache: 'no-store'});
   DATA = await r.json();
+  const saved = localStorage.getItem(LSKEY);
+  if (saved && confirm('Restore your in-progress session for this meeting? (Cancel = start fresh from the draft)')) {
+    DATA = JSON.parse(saved);
+  }
   document.getElementById('title').textContent = `${MID} — ${DATA.meeting.date} (${DATA.meeting.meeting_type})`;
   const f = DATA.meeting.source_files[0];
   document.getElementById('filesub').textContent = DATA.meeting.source_files.join(', ');
@@ -132,13 +139,14 @@ function render(){
         <div class="snippet">${esc(rec.source_snippet)}</div>`;
       const j = div.querySelector('.jump');
       if (j) j.onclick = () => jumpTo(rec._file || 0, rec._page);
-      div.querySelector('.verify').onchange = e => { rec._verified = e.target.checked; div.classList.toggle('verified', e.target.checked); progress(); };
-      div.querySelector('.del').onclick = () => { recs.splice(i,1); render(); };
+      div.querySelector('.verify').onchange = e => { rec._verified = e.target.checked; div.classList.toggle('verified', e.target.checked); progress(); autosave(); };
+      div.querySelector('.del').onclick = () => { recs.splice(i,1); render(); autosave(); };
       div.querySelectorAll('[data-f]').forEach(inp => {
         inp.onchange = () => {
           const f = inp.dataset.f;
           rec[f] = inp.classList.contains('num') ? parseInt(inp.value||'0',10) : (inp.value || null);
           if (inp.classList.contains('num')) inp.classList.add('changed');
+          autosave();
         };
       });
       root.appendChild(div);
@@ -146,7 +154,7 @@ function render(){
     const add = document.createElement('button');
     add.className = 'add';
     add.textContent = `+ add missed record`;
-    add.onclick = () => { recs.push(blank(key)); render(); };
+    add.onclick = () => { recs.push(blank(key)); render(); autosave(); };
     root.appendChild(add);
   }
   progress();
