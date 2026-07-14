@@ -8,7 +8,7 @@ import fitz  # pymupdf
 
 from cb1 import config
 
-MAX_IMAGE_BYTES = 4_500_000  # headroom under the 5 MB API limit
+MAX_IMAGE_BYTES = 3_600_000  # 5 MB API limit applies to BASE64 bytes (4/3 inflation)
 JPEG_QUALITY = 80
 FALLBACK_DPIS = (110, 80, 60)
 
