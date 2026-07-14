@@ -18,7 +18,12 @@ def page_jpeg(pdf_path, sha256: str, page_no: int, dpi: int = config.RASTER_DPI)
     if cache.exists():
         return cache.read_bytes()
     with fitz.open(pdf_path) as doc:
-        for try_dpi in (dpi, *FALLBACK_DPIS):
+        # API also caps dimensions at 8000px/side; poster-scale pages
+        # (plans, drawings) must be rendered at whatever DPI fits
+        rect = doc[page_no].rect
+        max_side_in = max(rect.width, rect.height) / 72
+        dim_cap = int(7500 / max_side_in) if max_side_in > 0 else dpi
+        for try_dpi in (min(dpi, dim_cap), *(min(d, dim_cap) for d in FALLBACK_DPIS)):
             pix = doc[page_no].get_pixmap(dpi=try_dpi, colorspace=fitz.csGRAY)
             img = pix.tobytes("jpg", jpg_quality=JPEG_QUALITY)
             if len(img) <= MAX_IMAGE_BYTES:
