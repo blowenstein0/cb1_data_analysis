@@ -1,0 +1,138 @@
+{
+  "_doc": [
+    "Manually recovered board votes missing from extraction, found by the",
+    "2026-07 divided-tally audit (regex sweep of full meeting text vs votes",
+    "table). Root cause for cb1-2021-09-14: the land-use roll-call pages were",
+    "classified as attachments by the segmenter, so the extractor never saw",
+    "them. Each source_snippet is verbatim from data/interim text/OCR.",
+    "Applied by cb1.db.load_db after the main load; entries are validated",
+    "against cb1.models.Vote. The 'note' key is documentation only.",
+    "Known-unresolved: cb1-2021-09-14 has a 32-0-0 roll call near the River",
+    "Ring committee report whose motion attribution is ambiguous (possibly",
+    "the 1 Wythe IBIA permit, extracted with voice-vote 0/0/0 tallies);",
+    "left untouched. Sidewalk-cafe tallies in SLA letters (e.g. 23-13-1-1",
+    "on 2025-05-13) are per-license actions, out of scope for this table."
+  ],
+  "add": [
+    {
+      "meeting_id": "cb1-2021-09-14",
+      "note": "River Ring vote 1 of 2",
+      "vote": {
+        "motion_text": "Support the committee's recommendation to vote NO WITH CONDITIONS on the River Ring application (C220062ZMK, N220063ZRK, C220064ZSK, N220065ZAK, N220066ZCK, N220067LDK, N220068ZAK, N220069ZAK, C220070ZSK)",
+        "topic_category": "land_use",
+        "mover": "Mr. Burrows",
+        "seconder": "Mr. Chesler",
+        "yes": 15, "no": 20, "abstain": 1, "recusal": 0,
+        "outcome": "failed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "VOTE 1. A motion was made by Mr. Burrows to support the committee's recommendation to vote NO WITH CONDITIONS. The motion was seconded by Mr. Chesler. A roll call vote was conducted. The vote was: 15 \"YES\"; 20 \"NO\"; 1 \"ABSTENTION\". The motion failed"
+      }
+    },
+    {
+      "meeting_id": "cb1-2021-09-14",
+      "note": "River Ring vote 2 of 2 - the operative ULURP recommendation",
+      "vote": {
+        "motion_text": "Support the recommendation to vote YES WITH THE COMMITTEE'S CONDITIONS on the River Ring application (C220062ZMK, N220063ZRK, C220064ZSK, N220065ZAK, N220066ZCK, N220067LDK, N220068ZAK, N220069ZAK, C220070ZSK)",
+        "topic_category": "land_use",
+        "mover": "Ms. Moskowits",
+        "seconder": "Ms. Bruzaitis",
+        "yes": 20, "no": 15, "abstain": 1, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "VOTE 2. A motion was made by Ms. Moskowits to support the recommendation to vote YES WITH THE COMMITTEE'S CONDITIONS. The motion was seconded by Ms. Bruzaitis. A roll call vote was conducted. The vote was: 20 \"YES\"; 15 \"NO\"; 1 \"ABSTENTION\". The motion was carried."
+      }
+    },
+    {
+      "meeting_id": "cb1-2021-09-14",
+      "note": "79 Quay Street applications",
+      "vote": {
+        "motion_text": "Approve with conditions the 79 Quay Street application (C 210166 ZMK, N 210167 ZRK)",
+        "topic_category": "land_use",
+        "mover": "Ms. Nieves",
+        "seconder": "Ms. Iglesias",
+        "yes": 29, "no": 0, "abstain": 0, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": true,
+        "conditions": [],
+        "source_snippet": "Recommendation for 79 QUAY STREET (C 210166 ZMK, N 210167 ZRK) - Ms. Teague noted that the committee recommends: Approval with conditions. A motion was made by Ms. Nieves to support the recommendation to APPROVE WITH CONDITIONS. The motion was seconded by Ms. Iglesias. A roll call vote was conducted. The vote was: 29 \"YES\"; 0 \"NO\"; 0 \"ABSTENTIONS\". The motion was carried."
+      }
+    },
+    {
+      "meeting_id": "cb1-2021-09-14",
+      "note": "Citywide Open Restaurants zoning text amendment",
+      "vote": {
+        "motion_text": "Support the committee's recommendation to DENY the Open Restaurants Text Amendment application (C 2021 Y0291)",
+        "topic_category": "land_use",
+        "mover": "Mr. Burrows",
+        "seconder": "Ms. Iglesias",
+        "yes": 31, "no": 0, "abstain": 1, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "Recommendation for OPEN RESTAURANTS TEXT AMENDMENT (C 2021 Y0291) -A motion was made by Mr. Burrows to support the committee's recommendation to DENY the application. The motion was seconded by Ms. Iglesias. A roll on the vote was conducted. The vote was: 31 \"YES\"; 0 \"NO\"; 1 \"ABSTENTION\". The motion was carried."
+      }
+    },
+    {
+      "meeting_id": "cb1-2025-06-10",
+      "note": "divided report-approval vote",
+      "vote": {
+        "motion_text": "Approve the Cannabis Review Committee report as written",
+        "topic_category": "other",
+        "mover": "Mr. Chesler",
+        "seconder": "Mr. Bruzaitis",
+        "yes": 30, "no": 6, "abstain": 4, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "CANNABIS REVIEW COMMITTEE – Mr. William Vega, Committee Chair, report as written. • Mr. Vega requested a motion: To approve report as written. A motion was made by Mr. Chesler and seconded by Mr. Bruzaitis. The vote was 30 “Yes”, 6 “No”, 4 “ABSTENTIONS”; 0 “RECUSALS”."
+      }
+    },
+    {
+      "meeting_id": "cb1-2023-12-19",
+      "note": "divided report-approval vote",
+      "vote": {
+        "motion_text": "Approve the Cannabis Review report as written",
+        "topic_category": "other",
+        "mover": "Ms. Del Teague",
+        "seconder": "Mr. Simon Weiser",
+        "yes": 24, "no": 1, "abstain": 0, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "Mr. Vega requested a motion to approve the Cannabis Review report as written. A motion was made by Ms. Del Teague, it was seconded by Mr. Simon Weiser. The vote was: 24 “YES”, 1 “NO”; 0 “ABSTENTIONS”; 0 “RECUSALS.”"
+      }
+    },
+    {
+      "meeting_id": "cb1-2018-06-12",
+      "note": "procedural, kept so the divided-vote audit reconciles to zero",
+      "vote": {
+        "motion_text": "Adjourn the meeting",
+        "topic_category": "internal",
+        "mover": null,
+        "seconder": null,
+        "yes": 29, "no": 1, "abstain": 0, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "ADJOURNMENT A roll call was taken to adjourn the meeting. The vote was: 29 \"YES\"; 1 \"NO\"; 0 \"ABSTENTIONS\"; o\"RECUSALS\"."
+      }
+    },
+    {
+      "meeting_id": "cb1-2020-09-08",
+      "note": "procedural, kept so the divided-vote audit reconciles to zero",
+      "vote": {
+        "motion_text": "Approve the minutes of the June 24, 2020 Board Meeting",
+        "topic_category": "internal",
+        "mover": "Ms. Viera",
+        "seconder": "Mr. Caponegro",
+        "yes": 29, "no": 0, "abstain": 1, "recusal": 0,
+        "outcome": "passed",
+        "unanimous": false,
+        "conditions": [],
+        "source_snippet": "Ms. Viera made a motion to approve the minutes of June 24, 2020 Board Meeting. The motion was seconded by Mr. Caponegro and carried. The roll call vote was: 29 \"YES\"; 0 \"NO\"; 1 \"ABSTENTION\" (Needelman); 0 \"RECUSALS\""
+      }
+    }
+  ]
+}

@@ -103,6 +103,26 @@ def load_db(extracted_dir: Path | None = None, db_path: Path | None = None) -> d
                  r["source_snippet"]],
             )
 
+    overrides_path = config.DATA_DIR / "vote_overrides.json"
+    if overrides_path.exists():
+        from cb1.models import Vote
+
+        loaded = {r[0] for r in con.execute("SELECT meeting_id FROM meetings").fetchall()}
+        entries = [
+            e for e in json.loads(overrides_path.read_text())["add"]
+            if e["meeting_id"] in loaded
+        ]
+        for e in entries:
+            r = Vote.model_validate(e["vote"]).model_dump()
+            con.execute(
+                "INSERT INTO votes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                [e["meeting_id"], r["motion_text"], r["topic_category"],
+                 r["mover"], r["seconder"], r["yes"], r["no"], r["abstain"],
+                 r["recusal"], r["outcome"], r["unanimous"], r["conditions"],
+                 r["source_snippet"]],
+            )
+        print(f"load-db: applied {len(entries)} vote overrides")
+
     counts = {}
     for t in TABLES:
         counts[t] = con.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
