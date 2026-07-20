@@ -20,7 +20,7 @@ OUT = REPO / "blog" / "williamsburg-waterfront.html"
 
 FRONT_MATTER = """---
 title: "{title}"
-description: "I scraped ten years of Brooklyn CB1 meeting minutes to find out whether showing up to community board meetings actually does anything."
+description: "I scraped ten years of my community board's minutes to find out if showing up works."
 author: "Brad Lowenstein"
 date: today
 format:
