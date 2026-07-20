@@ -7,6 +7,7 @@ code cells, silences the setup cell's stdout, renders with stored outputs
 Usage: uv run python scripts/render_blog.py [notebook]  (default: analysis/BLOG.ipynb)
 """
 
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -62,6 +63,9 @@ def main() -> None:
     with tempfile.TemporaryDirectory() as td:
         staged = Path(td) / "blog_render.ipynb"
         nbf.write(nb, staged)
+        images = REPO / "blog" / "images"
+        if images.is_dir():
+            shutil.copytree(images, Path(td) / "images")
         subprocess.run(
             ["uv", "run", "--with", "quarto-cli", "quarto", "render",
              str(staged), "--to", "html"],
