@@ -8,6 +8,7 @@
 
 <meta name="author" content="Brad Lowenstein">
 <meta name="dcterms.date" content="2026-07-19">
+<meta name="description" content="I scraped ten years of Brooklyn CB1 meeting minutes to find out whether showing up to community board meetings actually does anything.">
 
 <title>Williamsburg Waterfront</title>
 <style>
@@ -2220,8 +2221,18 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-  
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-backstory" id="toc-the-backstory" class="nav-link active" data-scroll-target="#the-backstory">The backstory</a></li>
+  <li><a href="#scraping-the-minutes" id="toc-scraping-the-minutes" class="nav-link" data-scroll-target="#scraping-the-minutes">Scraping the minutes</a></li>
+  <li><a href="#what-does-the-board-actually-fight-about" id="toc-what-does-the-board-actually-fight-about" class="nav-link" data-scroll-target="#what-does-the-board-actually-fight-about">What does the board actually fight about?</a></li>
+  <li><a href="#showing-up---at-the-mic-and-in-writing" id="toc-showing-up---at-the-mic-and-in-writing" class="nav-link" data-scroll-target="#showing-up---at-the-mic-and-in-writing">Showing up - at the mic and in writing</a></li>
+  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned">What I learned</a></li>
+  </ul>
+</nav>
 </div>
 <main class="content" id="quarto-document-content">
 
@@ -2230,6 +2241,11 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <h1 class="title">Williamsburg Waterfront</h1>
 </div>
 
+<div>
+  <div class="description">
+    I scraped ten years of Brooklyn CB1 meeting minutes to find out whether showing up to community board meetings actually does anything.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -2256,7 +2272,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </header>
 
 
-<div id="5fb1a38a-532d-4abd-8fe4-3c904026105c" class="cell" data-execution_count="1">
+<div id="5fb1a38a-532d-4abd-8fe4-3c904026105c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:38.334017Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:38.333867Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:41.439024Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:41.438562Z&quot;}}" data-execution_count="1">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json, re</span>
@@ -2324,12 +2340,17 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>wf_meetings <span class="op">=</span> wf[wf.wf_mentions <span class="op">&gt;</span> <span class="dv">0</span>].sort_values(<span class="st">&quot;date&quot;</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>I moved to Williamsburg in January 2026 and was excited about spending time by the waterfront along the East River. There’s a lot to take in - birds chirping, waves crashing, and the Manhattan skyline. I have previously lived in Seattle for 4 years and was impressed by the constant presence of and ease of access to nature. More relevant - I was inspired by the beloved parks built on waterfront real-estate that was dedicated for community enjoyment. Specifically Gas-Works park which is built on a beautiful waterfront lot overlooking the downtown skyline. As the name implies, this was a former gas/oil plant converted into a park for all to enjoy. Back on the Williamsburg waterfront there are two lots of heavily used park area (Marsha P. Johnson and Bushwich Inlet Park) next to 3 vacant asphalt lots.</p>
-<p>I did some research, and learned that there’s a long backstory here. The TLDR of it is that in 2005 then Mayor Bloomberg made a deal to rezone the north Brooklyn waterfront. The plan allowed the building of luxury high rise residential towers and promised the development of a publicly accessible waterfront. Great news! But it’s been 20 years, where’s our park?<br>
-It’s worth noting- the lack of a large accessible park is not without good reason. This area was historically a manufacturing and shipping lane - so the lots are large, the soil is polluted, and there is a mess of broken piers in the water. Also - In a post-Sandy world, any new waterfront development is held to a higher standard of storm proofing. Regardless, the current state of vacant lots is clearly not acceptable. If the resendential towers were able to be built - how hard could it be to build a park ?</p>
-<p>It turns out I wasn’t the only one frustrated. There are several community organizations focused on different parts of the waterfront: Friends of Bushwick Inlet Park, North Brooklyn Neighbors, North Brooklyn Parks Alliance, Brooklyn Greenway Initiative, Newtown Creek Alliance, Friends of WNYC Transmitter Park. I was energized to learn that there were neighbors who cared about the same problems and was curious to learn about the activism landscape - who is actually making change happen and who is focused on park maintenance or keeping the status quo. I also learned about Brooklyn Community Board 1. This is the local governing body of Williamsburg and Greenpoint - all land use decisisons are made here. Lucky for me, Brooklyn Community Board 1 (BCB1) posts all committe meeting notes on their website. As a data engineer and a curious resident I dove in. I scraped the pdfs and created a dataset to help me get a sense of what questions we could answer about how change happens on the most local level. There is a lot of interesting data in here, but this post will focus on the North Brooklyn waterfront development.</p>
-<p>I began by creating a dataset with all 108 meetings, 1241 votes, and 1360 speakers. The following analysis will focus on only the 92 meetings where the term ‘waterfront’ appears.</p>
-<div id="f5573757-3ce9-4936-9c44-5c1c3c03aa15" class="cell" data-execution_count="2">
+<p>I moved to Williamsburg in January 2026 and was excited about spending time by the waterfront along the East River. There’s a lot to take in - birds chirping, waves crashing, and the Manhattan skyline. I previously lived in Seattle for 4 years and was impressed by how easy it was to get to nature. More relevant - I was inspired by the beloved parks built on waterfront real-estate that was dedicated for community enjoyment. Specifically Gas Works Park, which is built on a beautiful waterfront lot overlooking the downtown skyline. As the name implies, this was a former gas/oil plant converted into a park for all to enjoy. Back on the Williamsburg waterfront there are two lots of heavily used park area (Marsha P. Johnson and Bushwick Inlet Park) next to 3 vacant asphalt lots.</p>
+<section id="the-backstory" class="level2">
+<h2 class="anchored" data-anchor-id="the-backstory">The backstory</h2>
+<p>I did some research, and learned that there’s a long backstory here. The TLDR of it is that in 2005 then Mayor Bloomberg made a deal to rezone the north Brooklyn waterfront. The plan allowed the building of luxury high rise residential towers and promised the development of a publicly accessible waterfront. Great news! But it’s been two decades, where’s our park? It’s worth noting - the lack of a large accessible park is not without good reason. This area was historically a manufacturing and shipping lane - so the lots are large, the soil is polluted, and there is a mess of broken piers in the water. Also - in a post-Sandy world, any new waterfront development is held to a higher standard of storm proofing. Regardless, the current state of vacant lots is clearly not acceptable. If the residential towers were able to be built - how hard could it be to build a park?</p>
+<p>It turns out I wasn’t the only one frustrated. There are several community organizations focused on different parts of the waterfront: Friends of Bushwick Inlet Park, North Brooklyn Neighbors, North Brooklyn Parks Alliance, Brooklyn Greenway Initiative, Newtown Creek Alliance, Friends of WNYC Transmitter Park. I was energized to learn that there were neighbors who cared about the same problems and was curious to learn about the activism landscape - who is actually making change happen and who is focused on park maintenance or keeping the status quo. I also learned about Brooklyn Community Board 1 (CB1). This is the local advisory board for Williamsburg and Greenpoint - every land use application has to come through it for a public hearing and a recommendation before the city decides.</p>
+</section>
+<section id="scraping-the-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="scraping-the-minutes">Scraping the minutes</h2>
+<p>Lucky for me, CB1 posts all committee meeting notes on their website. As a data engineer and a curious resident I dove in. I scraped the pdfs and created a dataset to help me get a sense of what questions we could answer about how change happens on the most local level. There is a lot of interesting data in here, but this post will focus on the North Brooklyn waterfront development.</p>
+<p>I began by creating a dataset with all 110 meetings, 1,254 votes, and 1,369 speakers. The following analysis will focus on only the 97 meetings where the term ‘waterfront’ appears.</p>
+<div id="f5573757-3ce9-4936-9c44-5c1c3c03aa15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:41.440207Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:41.440085Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:41.563611Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:41.563197Z&quot;}}" data-execution_count="2">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">11</span>, <span class="fl">3.8</span>))</span>
@@ -2347,11 +2368,14 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 </div>
 </div>
 <p>You can see that the term waterfront shows up frequently, with a few spikes in activity.</p>
-<p>January 20, 2026 — 275 mentions. This is a public hearing focused exclusively on Monitor Point. The notes are mostly written testimony from individuals and community groups including Veronica Zapasnik, a Polish immigrant who’s been in the neighborhood since 1990, and the NYSFAH (New York State Association for Affordable Housing). Reading the opposition arguments there is a strong emphasis on the rezoning being a violation of previous promises to make the land a waterfront park for all. The frustration is palpable.</p>
-<p>June 18, 2024 — 189 mentions. This is the Parks &amp; Waterfront Committee’s letter to elected officials covering habitat restoration at the inlet (“birds, insects, oysters”), Marsha P. Johnson State Park, a Sands Park walkthrough request. There is a swarm of emails to the board about the proposal to open a Tao nightclub next to the Bushwick inlet including one template that was re-sent 149 times.</p>
-<p>February 7, 2023 - 110 mentions. The meeting notes include a document from the Army Corps of Engineers discussion plans for storm mitigation in North Brooklyn.</p>
+<p>January 20, 2026 — 276 mentions. This is a public hearing focused exclusively on Monitor Point. The notes are mostly written testimony from individuals and community groups including Veronica Zapasnik, a Polish immigrant who’s been in the neighborhood since 1990, and NYSAFAH (the New York State Association for Affordable Housing). Reading the opposition arguments there is a strong emphasis on the rezoning being a violation of previous promises to make the land a waterfront park for all. The frustration is palpable.</p>
+<p>June 18, 2024 — 189 mentions. This is the Parks &amp; Waterfront Committee’s letter to elected officials covering habitat restoration at the inlet (“birds, insects, oysters”), Marsha P. Johnson State Park, a Sands Park walkthrough request. There is a swarm of emails to the board about the proposal to open a Tao nightclub next to Bushwick Inlet Park, including one template that was re-sent over 100 times.</p>
+<p>February 7, 2023 — 113 mentions. The meeting notes include a document from the Army Corps of Engineers discussing plans for storm mitigation in North Brooklyn.</p>
+</section>
+<section id="what-does-the-board-actually-fight-about" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-the-board-actually-fight-about">What does the board actually fight about?</h2>
 <p>Next I wanted to get a sense of what goes on in these meetings. Do these board meetings ever have contested votes? If so, when? And who has the power to actually contest and overturn a proposition?</p>
-<div id="aaa7cc2d-9d44-4a73-ab34-88d3e29651e9" class="cell" data-execution_count="5">
+<div id="aaa7cc2d-9d44-4a73-ab34-88d3e29651e9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:41.564772Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:41.564689Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:41.580224Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:41.579870Z&quot;}}" data-execution_count="3">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> q(<span class="st">&quot;&quot;&quot;</span></span>
@@ -2363,7 +2387,7 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>rates</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -2441,7 +2465,7 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 </div>
 </div>
 <p>So clearly votes on parks and environment are not drawing debate. It seems like the real debates happen in these land use votes.</p>
-<div id="2bb82aea-8445-4200-bfd5-acf0af21efdd" class="cell" data-execution_count="4">
+<div id="2bb82aea-8445-4200-bfd5-acf0af21efdd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:41.581386Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:41.581318Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:41.689222Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:41.688869Z&quot;}}" data-execution_count="4">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>v2 <span class="op">=</span> q(<span class="st">&quot;&quot;&quot;</span></span>
@@ -2506,10 +2530,13 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 </div>
 </div>
 </div>
-<p>The above plot shows the confidence interval for each type of vote being contested compared to the odds of a liquor license vote being contested. Underlying this analysis is the assumption that votes of one board meeting are independent from another board meeting. The liquor license votes were chosen as the baseline due to the ubiquity of this type of vote in every board meeting, high vote count, and dispersion of contested and non-contested votes.</p>
-<p>Looking at the park votes - we see that votes on park matters are 1/4th as likely to be contested compared to liquor license votes. Strange - you’d expect that given all the community organization and frustration on the waterfront development there would be more heated votes on these matters.</p>
-<p>Next I took a look a look at these votes considering timeline and community involvement. The reality becomes more clear - land use meetings are where the confrontation really takes place. Land use meetings are used to decide if a real-estate development will build or the land will be opened up to the community.</p>
-<div id="996d82aa-14cc-4124-ac5e-60e8c9bc289a" class="cell" data-execution_count="9">
+<p>The above plot shows the confidence interval for each type of vote being contested compared to the odds of a liquor license vote being contested. Underlying this analysis is the assumption that votes from one board meeting are independent of votes from another (within a single meeting votes are correlated, which the model accounts for by clustering errors at the meeting level). The liquor license votes were chosen as the baseline due to the ubiquity of this type of vote in every board meeting, high vote count, and dispersion of contested and non-contested votes.</p>
+<p>Looking at the park votes - we see that votes on park matters have about a quarter the odds of being contested compared to liquor license votes. Strange - you’d expect that given all the community organization and frustration on the waterfront development there would be more heated votes on these matters.</p>
+</section>
+<section id="showing-up---at-the-mic-and-in-writing" class="level2">
+<h2 class="anchored" data-anchor-id="showing-up---at-the-mic-and-in-writing">Showing up - at the mic and in writing</h2>
+<p>Next I took a look at these votes considering timeline and community involvement. The reality becomes more clear - land use votes are where the confrontation really takes place. A land use vote is where the board weighs in on whether a real-estate development gets built or the land is opened up to the community.</p>
+<div id="996d82aa-14cc-4124-ac5e-60e8c9bc289a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:41.690470Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:41.690390Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:41.715547Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:41.715160Z&quot;}}" data-execution_count="5">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>WF <span class="op">=</span> (<span class="st">&quot;(bushwick inlet|monitor point|river ring|quay|65 commercial|56 quay|&quot;</span></span>
@@ -2542,7 +2569,7 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>wfv[[<span class="st">&quot;date&quot;</span>, <span class="st">&quot;topic_category&quot;</span>, <span class="st">&quot;kind&quot;</span>, <span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>, <span class="st">&quot;abstain&quot;</span>, <span class="st">&quot;num_conditions_attached&quot;</span>, <span class="st">&quot;division&quot;</span>, <span class="st">&quot;spk90&quot;</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
@@ -2880,7 +2907,7 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 </div>
 </div>
 </div>
-<div id="b5993372-d70f-43cc-9f00-ee58bd27f1e5" class="cell" data-execution_count="13">
+<div id="b5993372-d70f-43cc-9f00-ee58bd27f1e5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:41.716608Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:41.716534Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:42.905904Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:42.905522Z&quot;}}" data-execution_count="6">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
@@ -2924,72 +2951,13 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    rows.append({<span class="st">&quot;date&quot;</span>: pd.Timestamp(m[<span class="st">&quot;date&quot;</span>]), <span class="st">&quot;n_virtual&quot;</span>: wf_items})</span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>corr_pm <span class="op">=</span> pd.DataFrame(rows).query(<span class="st">&quot;n_virtual &gt; 0&quot;</span>).sort_values(<span class="st">&quot;date&quot;</span>)</span>
 <span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>corr_pm<span class="sc">.</span>n_virtual<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> waterfront written comments across &quot;</span></span>
-<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;</span><span class="sc">{</span><span class="bu">len</span>(corr_pm)<span class="sc">}</span><span class="ss"> meetings (packets include correspondence from ~2022)&quot;</span>)</span>
-<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>corr_pm.tail(<span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>      <span class="ss">f&quot;</span><span class="sc">{</span><span class="bu">len</span>(corr_pm)<span class="sc">}</span><span class="ss"> meetings (packets include correspondence from ~2022)&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>355 waterfront written comments across 42 meetings (packets include correspondence from ~2022)</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">date</th>
-<th data-quarto-table-cell-role="th">n_virtual</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">102</th>
-<td>2025-12-09</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">103</th>
-<td>2026-01-13</td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">104</th>
-<td>2026-01-20</td>
-<td>67</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">105</th>
-<td>2026-02-10</td>
-<td>9</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">106</th>
-<td>2026-03-10</td>
-<td>7</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">107</th>
-<td>2026-04-14</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">108</th>
-<td>2026-05-12</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">109</th>
-<td>2026-06-09</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-
 </div>
-</div>
-</div>
-<div id="6a080008-bd62-4551-9b16-cd80423d8edc" class="cell" data-execution_count="14">
+<div id="6a080008-bd62-4551-9b16-cd80423d8edc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:18:42.907057Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:18:42.906981Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:18:43.118111Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:18:43.117651Z&quot;}}" data-execution_count="7">
 <details class="code-fold">
 <summary>show the code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>per_meet <span class="op">=</span> q(<span class="ss">f&quot;&quot;&quot;</span></span>
@@ -3090,12 +3058,16 @@ It’s worth noting- the lack of a large accessible park is not without good rea
 </div>
 </div>
 </div>
-<p>The above charts show the community involvement (top) and associated votes from the board (bottom). Based on the dataset, we see minimal community invovlement and few contentious votes from 2016 to 2020. Division appears exactly twice in the voting record - the River Ring cluster (2021) and Monitor Point (2026). These divisive votes correlate with spikes in community testimony. Every divided vote (the blue spikes in the bottom chart) is clearly correlated with a land use vote and large community involvement. One data point that I found really interesting is the 2024 Tao nighclub vote - it’s misisng from the board division chart because of a large and effective email campaign.</p>
-<p><strong>Reading the figure.</strong> The bottom panel’s flat baseline from 2016 through 2020 is the <em>ritual decade</em>: waterfront advocacy motions passing unanimously, year after year. Division appears exactly twice - the River Ring cluster (2021) and the Monitor Point cluster (2026) - and both sit directly under the two tallest testimony spikes in the top panel. Also visible: turnout is not one-sided. At Monitor Point’s February 2026 vote the matched testimony ran 24 <em>for</em> / 8 <em>against</em> (union members supporting the project), while the 4,747-signature petition ran against - “community involvement” was on both sides of the room.</p>
-<p>The color split resolves the Section 2 paradox at a glance: <strong>every divided vote is land use (blue)</strong>. The fourteen parks motions (green) pass unanimously down to the last vote - 14 for 14 - which is the waterfront version of Model 2’s district-wide finding (parks OR 0.23). The contentious votes are not park questions; they are land-use questions <em>about</em> park land.</p>
-<p>One event sits outside both panels by construction: the June 2024 TAO campaign (“Say ‘No’ To Nightclubs At Bushwick Inlet Park”, 105 template emails <em>plus</em> ten speakers whose extracted topics name the applicant, not the park). The board denied that liquor license 31-0 the same night - the community’s one outright waterfront win in the dataset, and it happened on the smallest, most specific decision on the ballot. That is Model 3’s address-specificity result wearing park colors.</p>
-<p>The hatched bars are the written channel, and they invert the picture of the Monitor Point era: at the January 2026 hearing only 5 matched speakers took the mic, but the packet contains <strong>67 written comments - every piece of correspondence bound in that month was about the waterfront</strong> (plus the 4,747-signature petition). By 2024-26 most community input arrives in writing; a mic-only measure undercounts the mobilization several-fold. The bars begin in 2022 because that is when the office began binding correspondence into packets - absence before then is archival, not civic.</p>
-<p>Note what turnout did <strong>not</strong> do: River Ring and Monitor Point were both approved. The petition did not flip a vote. What high turnout coincides with is (a) recorded splits - every member’s name on a roll call - and (b) conditions attached to approval (Monitor Point’s 15, traced ask-by-ask to testimony in <code>waterfront_saga.ipynb</code>).</p>
+<p>The above charts show the community involvement (top) and the board’s votes (bottom). From 2016 to 2020 there’s minimal community involvement and zero contentious votes - waterfront advocacy motions pass unanimously, year after year. Division shows up exactly twice in the voting record: the River Ring cluster (2021) and Monitor Point (2026). Both sit directly under the two tallest testimony spikes in the top chart. And every divided vote is a land use vote (blue). The parks motions (green) went 14 for 14, unanimous - the fights are not park questions, they are land use questions about park land.</p>
+<p>Two details in the chart surprised me. First, turnout is not one-sided: at the Monitor Point vote in February 2026 the testimony ran 24 in favor vs 8 against - union members turned out for the project - while a 4,747-signature petition ran against it. “Community involvement” was on both sides of the room. Second, the hatched bars show the written channel, and it inverts the picture: at the January 2026 hearing only 5 people spoke at the mic, but the packet contains 67 written comments - every piece of correspondence bound in that month was about the waterfront. By 2024-26 most community input arrives in writing. (The hatched bars only start in 2022 because that’s when the board office began binding correspondence into the minutes - silence before that is archival, not civic.)</p>
+<p>The 2024 Tao nightclub fight is missing from the bottom chart for a boring reason - it was a liquor license vote, and the chart only tracks land use. But it deserves a mention, because it’s the community’s one outright win in the dataset: 105 template emails plus ten speakers at the mic, and the board denied the license 31-0 that same night. The smallest, most specific ask on the ballot was the one that fully converted.</p>
+<p>Note what the turnout did <em>not</em> do: River Ring and Monitor Point were both approved. The petition didn’t flip a vote. What big turnout coincides with is (a) recorded splits - every member’s name on a roll call - and (b) conditions attached to the approval. Monitor Point passed with 15 of them, and you can trace individual conditions back to specific community asks - the esplanade width, the museum’s occupancy certificate, the maintenance money doubling.</p>
+</section>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">What I learned</h2>
+<p>The board’s agreement was never the scarce resource - it voted with the community, unanimously, for a decade, and the park still didn’t get built. The scarce resources are the record and the terms. Land use hearings are where names go on paper and where specific asks become enforceable conditions. Volume alone doesn’t flip votes; specificity converts.</p>
+<p>So that’s where I’ll be spending my evenings - at the land use hearings, with asks concrete enough to survive as condition #7. I’ll publish the dataset and the full analysis notebook once the repo is public. If you live in Williamsburg or Greenpoint, the meeting schedule is on CB1’s website - come say hi.</p>
+</section>
 
 </main>
 <!-- /main column -->

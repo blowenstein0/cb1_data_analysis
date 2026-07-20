@@ -4,21 +4,23 @@ Never writes to BLOG.ipynb: stages a copy, injects front matter, drops empty
 code cells, silences the setup cell's stdout, renders with stored outputs
 (no execution), and moves the self-contained HTML into blog/.
 
-Usage: uv run python scripts/render_blog.py
+Usage: uv run python scripts/render_blog.py [notebook]  (default: analysis/BLOG.ipynb)
 """
 
 import subprocess
+import sys
 import tempfile
 from pathlib import Path
 
 import nbformat as nbf
 
 REPO = Path(__file__).resolve().parent.parent
-SRC = REPO / "analysis" / "BLOG.ipynb"
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else REPO / "analysis" / "BLOG.ipynb"
 OUT = REPO / "blog" / "williamsburg-waterfront.html"
 
 FRONT_MATTER = """---
 title: "{title}"
+description: "I scraped ten years of Brooklyn CB1 meeting minutes to find out whether showing up to community board meetings actually does anything."
 author: "Brad Lowenstein"
 date: today
 format:
