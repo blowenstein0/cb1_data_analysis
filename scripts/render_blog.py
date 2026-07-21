@@ -33,8 +33,8 @@ SLUG = "does-showing-up-work"
 SITE_BLOG = Path.home() / "Workspace" / "BradLowensteinPersonalSite" / "blog"
 POST_URL = f"https://bradlowenstein.com/blog/{SLUG}"
 DESCRIPTION = (
-    "I was curious about how this land was managed "
-    "and dove deep into the data."
+    "I was curious how the North Brooklyn waterfront properties "
+    "were managed and dove deep into the data."
 )
 OG_IMAGE = "https://bradlowenstein.com/blog/images/bip_and_lots.jpg"
 
