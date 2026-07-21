@@ -1,10 +1,10 @@
 """Render analysis/BLOG.ipynb to blog/williamsburg-waterfront.html via Quarto.
 
-Never writes to BLOG.ipynb: stages a copy, injects front matter, drops empty
+Never writes to the source notebook: stages a copy, injects front matter, drops empty
 code cells, silences the setup cell's stdout, renders with stored outputs
 (no execution), and moves the self-contained HTML into blog/.
 
-Usage: uv run python scripts/render_blog.py [notebook]  (default: analysis/BLOG.ipynb)
+Usage: uv run python scripts/render_blog.py [notebook]  (default: analysis/blog_v2.ipynb)
 """
 
 import shutil
@@ -16,7 +16,7 @@ from pathlib import Path
 import nbformat as nbf
 
 REPO = Path(__file__).resolve().parent.parent
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else REPO / "analysis" / "BLOG.ipynb"
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else REPO / "analysis" / "blog_v2.ipynb"
 OUT = REPO / "blog" / "williamsburg-waterfront.html"
 
 FRONT_MATTER = """---

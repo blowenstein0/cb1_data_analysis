@@ -24,3 +24,10 @@ eval/cache/
 analysis/*.html
 .ipynb_checkpoints/
 docs/transcripts/
+
+# personal working files / drafts (kept local, expunged from history)
+docs/SESSION-LOG.md
+docs/spec-review-harness.md
+blog/the-park-that-never-came.html
+analysis/BLOG.ipynb
+analysis/cb1_workbench.ipynb

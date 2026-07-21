@@ -5,6 +5,34 @@ meeting-minutes PDFs, extracted into a queryable DuckDB dataset via a
 cost-tiered LLM pipeline, with an eval harness proving extraction accuracy.
 See [PLAN.md](PLAN.md) for architecture and design decisions.
 
+## The story
+
+The dataset was built for the blog post **[Two Parks, Two Vacant Lots, and
+1,254 Votes](blog/williamsburg-waterfront.html)** (published at
+bradlowenstein.com): does showing up to community board meetings actually do
+anything? The narrative analysis behind it is
+[analysis/does_showing_up_work.ipynb](analysis/does_showing_up_work.ipynb);
+the wider notebook set in [analysis/](analysis/) covers the regression
+models, the decade-long waterfront saga timeline, waterfront EDA, and an
+entity graph of who speaks and writes in.
+
+## Use the data without running anything
+
+The extracted dataset ships in the repo (`data/db/*.parquet`, ~700 KB
+total) — no pipeline run or LLM spend needed:
+
+```python
+import pandas as pd
+votes = pd.read_parquet("data/db/votes.parquet")
+```
+
+Everything is extracted from CB1's publicly posted meeting minutes. Names in
+the dataset (speakers, license applicants, letter writers) appear in that
+public record; every row carries a verbatim `source_snippet` so any value
+can be traced to its source page. Manual corrections are documented in
+`data/overrides.json` (dates) and `data/vote_overrides.json` (votes missed
+by extraction, recovered by hand with quotes).
+
 ## Setup
 
 ```bash
