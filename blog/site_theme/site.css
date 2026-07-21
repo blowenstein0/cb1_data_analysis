@@ -1,6 +1,5 @@
-/* Match bradlowenstein.com: 640px prose column, system fonts, light theme.
-   The Quarto body column is 900px so charts and the votes table can break
-   out wider than the text, 538-style. */
+/* Match bradlowenstein.com: single 640px column, system fonts, light theme.
+   Figures, photos, and the votes table share the prose column width. */
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
