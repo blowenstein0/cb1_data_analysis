@@ -1,0 +1,127 @@
+/* Match bradlowenstein.com: 640px prose column, system fonts, light theme.
+   The Quarto body column is 900px so charts and the votes table can break
+   out wider than the text, 538-style. */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+/* --- nav (injected via include-before-body) --- */
+.site-nav { padding: 24px 0; }
+.site-nav .site-shell {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-nav .name { font-size: 16px; font-weight: 600; color: #111; text-decoration: none; }
+.site-nav .links a { font-size: 14px; color: #666; text-decoration: none; margin-left: 24px; }
+.site-nav .links a:hover { color: #111; }
+
+/* --- title block --- */
+#title-block-header { margin-top: 36px; margin-bottom: 40px; }
+#title-block-header .title {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    color: #111;
+    margin-bottom: 10px;
+}
+#title-block-header .description {
+    font-size: 17px;
+    color: #777;
+    margin-bottom: 14px;
+}
+.quarto-title-meta-heading { display: none !important; }
+.quarto-title-meta { display: flex !important; gap: 8px; }
+.quarto-title-meta p { margin: 0; }
+.quarto-title-meta-contents, .quarto-title-meta-contents a { font-size: 13px; color: #aaa; }
+.quarto-title-meta > div:not(:last-child) .quarto-title-meta-contents p::after {
+    content: "\00b7"; margin-left: 8px; color: #aaa;
+}
+
+/* --- prose --- */
+main.content { font-size: 16px; line-height: 1.7; }
+main.content p, main.content ul, main.content ol, main.content blockquote {
+    max-width: 640px;
+    color: #444;
+}
+main.content h2 {
+    max-width: 640px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin: 48px 0 16px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+main.content h3 { max-width: 640px; font-size: 18px; font-weight: 700; color: #111; margin: 36px 0 12px; }
+main.content a { color: #0066cc; text-decoration: underline; text-underline-offset: 3px; }
+main.content a:hover { color: #004499; }
+
+/* --- figures: photos and charts span the full 900px body column --- */
+.quarto-figure, figure.figure { margin: 28px 0; }
+.quarto-figure img, figure.figure img { max-width: 100%; height: auto; }
+/* quarto wraps figure imgs in a <p>; don't let the prose column cap them */
+main.content figure p { max-width: none; margin: 0; }
+figcaption, .figure-caption { font-size: 13px; color: #999; margin-top: 8px; text-align: left; }
+
+/* --- votes table (details disclosure from the notebook) --- */
+main.content details { font-size: 14px; }
+main.content details summary { color: #666; cursor: pointer; }
+/* the wide table must not set the page's min width on phones: let the grid
+   column shrink and scroll the table inside its own box instead */
+.page-columns > main.content { min-width: 0; }
+main.content details, .vote-scroll { max-width: 100%; overflow-x: auto; }
+
+/* --- TOC --- */
+#toc-title { font-size: 13px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+.sidebar nav[role="doc-toc"] > ul li a { color: #999; font-size: 14px; }
+.sidebar nav[role="doc-toc"] > ul li a.active { color: #0066cc; }
+
+/* --- back link / subscribe / footer (injected via include-after-body) --- */
+/* quarto drops after-body content inside its page grid; span the full screen */
+#quarto-content.page-columns > .site-after,
+.page-columns > .site-after {
+    /* align the back-link and subscribe box with the article column */
+    grid-column: body-content-start / body-content-end !important;
+    width: 100%;
+}
+#quarto-content.page-columns > .site-footer,
+.page-columns > .site-footer {
+    grid-column: screen-start / screen-end !important;
+    width: 100%;
+}
+.site-narrow { max-width: 640px; }
+.site-footer .site-narrow { max-width: none; text-align: center; }
+.back-link { display: inline-block; margin-top: 48px; font-size: 14px; color: #aaa; text-decoration: none; }
+.back-link:hover { color: #666; }
+
+.subscribe-box { margin-top: 48px; padding: 32px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; text-align: center; }
+.subscribe-box h3 { font-size: 18px; font-weight: 600; color: #111; margin-bottom: 8px; }
+.subscribe-box p { font-size: 14px; color: #888; margin-bottom: 16px; }
+.subscribe-box form { display: flex; gap: 8px; justify-content: center; max-width: 400px; margin: 0 auto; }
+.subscribe-box input[type="email"] { flex: 1; padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none; }
+.subscribe-box input[type="email"]:focus { border-color: #999; }
+.subscribe-box button { padding: 10px 20px; background: #111; color: #fff; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; font-weight: 500; }
+.subscribe-box button:hover { background: #333; }
+#subscribe-msg { margin-top: 12px; font-size: 14px; }
+
+.site-footer {
+    padding: 48px 0 32px;
+    border-top: 1px solid #eee;
+    font-size: 13px;
+    color: #bbb;
+    margin-top: 64px;
+}
+.site-footer a { color: #bbb; text-decoration: underline; }
+.site-footer a:hover { color: #888; }
+
+@media (max-width: 640px) {
+    #title-block-header .title { font-size: 26px; }
+}

@@ -14,6 +14,7 @@ Usage: uv run python scripts/render_blog.py [--publish] [notebook]
 """
 
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -46,7 +47,12 @@ format:
   html:
     toc: true
     embed-resources: {embed}
-    fig-align: left{header}
+    fig-align: left
+    grid:
+      body-width: 900px
+    css: site.css
+    include-before-body: nav.html
+    include-after-body: footer.html{header}
 execute:
   enabled: false
   echo: false
@@ -105,6 +111,8 @@ def main() -> None:
         images = REPO / "blog" / "images"
         if images.is_dir():
             shutil.copytree(images, Path(td) / "images")
+        for f in (REPO / "blog" / "site_theme").iterdir():
+            shutil.copy2(f, Path(td) / f.name)
         if PUBLISH:
             json_ld = json.dumps({
                 "@context": "https://schema.org",
@@ -125,10 +133,19 @@ def main() -> None:
              str(staged), "--to", "html"],
             check=True, cwd=REPO,
         )
+        rendered = Path(td) / f"{stem}.html"
+        # drop Quarto's unused jQuery/RequireJS CDN tags (nothing on the
+        # page needs them; keeps the post free of external dependencies)
+        rendered.write_text(re.sub(
+            r'<script src="https://cdn\.jsdelivr\.net[^"]*"[^>]*></script>',
+            "", rendered.read_text(),
+        ))
         if PUBLISH:
             SITE_BLOG.mkdir(exist_ok=True)
             html = SITE_BLOG / f"{SLUG}.html"
             shutil.copy2(Path(td) / f"{stem}.html", html)
+            # quarto links css: files relatively but leaves them out of _files/
+            shutil.copy2(REPO / "blog" / "site_theme" / "site.css", SITE_BLOG / "site.css")
             files_dir = SITE_BLOG / f"{SLUG}_files"
             if files_dir.exists():
                 shutil.rmtree(files_dir)

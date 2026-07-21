@@ -1,0 +1,50 @@
+<div class="site-after">
+    <div class="site-narrow">
+        <a href="/blog/" class="back-link">&larr; Back to blog</a>
+
+        <div class="subscribe-box">
+            <h3>Get notified of new posts</h3>
+            <p>No spam. Unsubscribe anytime.</p>
+            <form id="subscribe-form" onsubmit="handleSubscribe(event)">
+                <input type="email" id="subscribe-email" placeholder="you@example.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscribe-msg" style="display:none;"></p>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="site-narrow">
+        Brad Lowenstein &middot; <a href="https://www.linkedin.com/in/brad-lowenstein/">LinkedIn</a> &middot; Vibe-coded so I can play <a href="https://en.wikipedia.org/wiki/Rebound_effect_(conservation)">guitar</a>.
+    </div>
+</footer>
+
+<script>
+async function handleSubscribe(e) {
+    e.preventDefault();
+    var email = document.getElementById('subscribe-email').value;
+    var msg = document.getElementById('subscribe-msg');
+    var btn = e.target.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    try {
+        var res = await fetch('https://api.bradlowenstein.com/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email }),
+        });
+        var data = await res.json();
+        msg.style.display = 'block';
+        msg.style.color = '#2a7d2a';
+        msg.textContent = data.message || 'Check your email to confirm!';
+        e.target.reset();
+    } catch (err) {
+        msg.style.display = 'block';
+        msg.style.color = '#cc0000';
+        msg.textContent = 'Something went wrong. Try again.';
+    }
+    btn.disabled = false;
+    btn.textContent = 'Subscribe';
+}
+</script>
