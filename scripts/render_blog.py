@@ -49,7 +49,7 @@ format:
     embed-resources: {embed}
     fig-align: left
     grid:
-      body-width: 640px
+      body-width: 720px
     css: site.css
     include-before-body: nav.html
     include-after-body: footer.html{header}

@@ -46,15 +46,15 @@ body {
 
 /* --- prose --- */
 main.content { font-size: 16px; line-height: 1.7; }
-.tldr { max-width: 640px; }
+.tldr { max-width: 720px; }
 .tldr p { font-style: italic; color: #666; }
 .tldr strong { font-style: normal; color: #111; }
 main.content p, main.content ul, main.content ol, main.content blockquote {
-    max-width: 640px;
+    max-width: 720px;
     color: #444;
 }
 main.content h2 {
-    max-width: 640px;
+    max-width: 720px;
     font-size: 22px;
     font-weight: 700;
     color: #111;
@@ -62,7 +62,7 @@ main.content h2 {
     border-bottom: none;
     padding-bottom: 0;
 }
-main.content h3 { max-width: 640px; font-size: 18px; font-weight: 700; color: #111; margin: 36px 0 12px; }
+main.content h3 { max-width: 720px; font-size: 18px; font-weight: 700; color: #111; margin: 36px 0 12px; }
 main.content a { color: #0066cc; text-decoration: underline; text-underline-offset: 3px; }
 main.content a:hover { color: #004499; }
 
@@ -99,7 +99,7 @@ main.content details, .vote-scroll { max-width: 100%; overflow-x: auto; }
     grid-column: screen-start / screen-end !important;
     width: 100%;
 }
-.site-narrow { max-width: 640px; }
+.site-narrow { max-width: 720px; }
 .site-footer .site-narrow { max-width: none; text-align: center; }
 .back-link { display: inline-block; margin-top: 0; font-size: 14px; color: #aaa; text-decoration: none; }
 .back-link:hover { color: #666; }
@@ -124,6 +124,6 @@ main.content details, .vote-scroll { max-width: 100%; overflow-x: auto; }
 .site-footer a { color: #bbb; text-decoration: underline; }
 .site-footer a:hover { color: #888; }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
     #title-block-header .title { font-size: 26px; }
 }
