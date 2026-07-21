@@ -9,7 +9,7 @@ __pycache__/
 # data (regenerable / large)
 data/raw/
 data/interim/
-data/db/
+data/db/cb1.duckdb
 data/costs.jsonl
 data/unresolved.json
 
