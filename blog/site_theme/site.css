@@ -47,6 +47,9 @@ body {
 
 /* --- prose --- */
 main.content { font-size: 16px; line-height: 1.7; }
+.tldr { max-width: 640px; }
+.tldr p { font-style: italic; color: #666; }
+.tldr strong { font-style: normal; color: #111; }
 main.content p, main.content ul, main.content ol, main.content blockquote {
     max-width: 640px;
     color: #444;
@@ -99,7 +102,7 @@ main.content details, .vote-scroll { max-width: 100%; overflow-x: auto; }
 }
 .site-narrow { max-width: 640px; }
 .site-footer .site-narrow { max-width: none; text-align: center; }
-.back-link { display: inline-block; margin-top: 48px; font-size: 14px; color: #aaa; text-decoration: none; }
+.back-link { display: inline-block; margin-top: 0; font-size: 14px; color: #aaa; text-decoration: none; }
 .back-link:hover { color: #666; }
 
 .subscribe-box { margin-top: 48px; padding: 32px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; text-align: center; }
