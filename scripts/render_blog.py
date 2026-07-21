@@ -27,12 +27,11 @@ date: today
 format:
   html:
     toc: true
-    code-fold: true
-    code-summary: "show the code"
     embed-resources: true
     fig-align: left
 execute:
   enabled: false
+  echo: false
 ---"""
 
 
@@ -52,11 +51,11 @@ def main() -> None:
         c for c in nb.cells if not (c.cell_type == "code" and not c.source.strip())
     ]
 
-    # setup cell prints indexing stats; keep the code visible but mute stdout
+    # mute all stdout: code is hidden (echo: false), so stray prints would
+    # float context-free; figures are display_data and unaffected
     for c in nb.cells:
         if c.cell_type == "code":
             c.outputs = [o for o in c.outputs if o.output_type != "stream"]
-            break
 
     nb.cells.insert(0, nbf.v4.new_raw_cell(FRONT_MATTER.format(title=title)))
 
