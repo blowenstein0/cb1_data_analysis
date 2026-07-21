@@ -33,8 +33,8 @@ SLUG = "does-showing-up-work"
 SITE_BLOG = Path.home() / "Workspace" / "BradLowensteinPersonalSite" / "blog"
 POST_URL = f"https://bradlowenstein.com/blog/{SLUG}"
 DESCRIPTION = (
-    "I scraped ten years of my community board's minutes "
-    "to find out if showing up works."
+    "I was curious about how this land was managed "
+    "and dove deep into the data."
 )
 OG_IMAGE = "https://bradlowenstein.com/blog/images/bip_and_lots.jpg"
 
