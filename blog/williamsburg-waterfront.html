@@ -2263,7 +2263,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <h2 class="anchored" data-anchor-id="scraping-the-minutes">Scraping the minutes</h2>
 <p>Lucky for me, CB1 posts all committee meeting notes on their website. As a data engineer and a curious resident I dove in. I scraped the pdfs and created a dataset to help me get a sense of what questions we could answer about how change happens on the most local level. There is a lot of interesting data in here, but this post will focus on the North Brooklyn waterfront development.</p>
 <p>I began by creating a dataset with all 110 meetings, 1,254 votes, and 1,369 speakers. The following analysis will focus on only the 97 meetings where the term ‘waterfront’ appears.</p>
-<div id="f5573757-3ce9-4936-9c44-5c1c3c03aa15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:14:28.435803Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:14:28.435677Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:14:28.568363Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:14:28.567510Z&quot;}}" data-execution_count="2">
+<div id="f5573757-3ce9-4936-9c44-5c1c3c03aa15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:17:20.675168Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:17:20.675068Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:17:20.806404Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:17:20.806025Z&quot;}}" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2280,7 +2280,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <section id="what-does-the-board-actually-fight-about" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-the-board-actually-fight-about">What does the board actually fight about?</h2>
 <p>Next I wanted to get a sense of what goes on in these meetings. Do these board meetings ever have contested votes? If so, when - and over what?</p>
-<div id="aaa7cc2d-9d44-4a73-ab34-88d3e29651e9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:14:28.569738Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:14:28.569646Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:14:28.657653Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:14:28.657177Z&quot;}}" data-execution_count="3">
+<div id="aaa7cc2d-9d44-4a73-ab34-88d3e29651e9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:17:20.807550Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:17:20.807476Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:17:20.895968Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:17:20.895588Z&quot;}}" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2290,7 +2290,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </div>
 </div>
 <p>So clearly votes on parks and environment are not drawing debate. It seems like the real debates happen in these land use votes.</p>
-<div id="2bb82aea-8445-4200-bfd5-acf0af21efdd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:14:28.658869Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:14:28.658792Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:14:28.761717Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:14:28.761220Z&quot;}}" data-execution_count="4">
+<div id="2bb82aea-8445-4200-bfd5-acf0af21efdd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:17:20.897188Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:17:20.897102Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:17:21.013736Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:17:21.013388Z&quot;}}" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2305,9 +2305,9 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <section id="showing-up---at-the-mic-and-in-writing" class="level2">
 <h2 class="anchored" data-anchor-id="showing-up---at-the-mic-and-in-writing">Showing up - at the mic and in writing</h2>
 <p>Next I took a look at these votes considering timeline and community involvement. The reality becomes more clear - land use votes are where the confrontation really takes place. A land use vote is where the board weighs in on whether a real-estate development gets built or the land is opened up to the community.</p>
-<div id="996d82aa-14cc-4124-ac5e-60e8c9bc289a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:14:28.762956Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:14:28.762859Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:14:28.782981Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:14:28.782597Z&quot;}}" data-execution_count="5">
+<div id="996d82aa-14cc-4124-ac5e-60e8c9bc289a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:17:21.014990Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:17:21.014914Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:17:21.035129Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:17:21.034702Z&quot;}}" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
-<details><summary><strong>The 26 votes behind the chart</strong> (click to expand)</summary><div class="vote-scroll" style="max-height:420px;overflow-y:auto;border:1px solid #dee2e6;border-radius:4px;margin-top:0.5em;">
+<details open><summary><strong>The 26 votes behind the chart</strong></summary><div class="vote-scroll" style="max-height:420px;overflow-y:auto;border:1px solid #dee2e6;border-radius:4px;margin-top:0.5em;">
 <table class="dataframe table table-sm table-striped caption-top small">
 <thead>
 <tr class="header">
@@ -2560,7 +2560,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </div><style>.vote-scroll thead th{position:sticky;top:0;background:#fff;box-shadow:0 1px 0 #dee2e6;}</style></details>
 </div>
 </div>
-<div id="6a080008-bd62-4551-9b16-cd80423d8edc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:14:29.885946Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:14:29.885845Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:14:30.176294Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:14:30.175869Z&quot;}}" data-execution_count="7">
+<div id="6a080008-bd62-4551-9b16-cd80423d8edc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T18:17:22.159910Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T18:17:22.159837Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T18:17:22.359394Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T18:17:22.359003Z&quot;}}" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
