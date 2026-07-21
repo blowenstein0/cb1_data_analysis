@@ -2263,7 +2263,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <h2 class="anchored" data-anchor-id="scraping-the-minutes">Scraping the minutes</h2>
 <p>Lucky for me, CB1 posts all committee meeting notes on their website. As a data engineer and a curious resident I dove in. I scraped the pdfs and created a dataset to help me get a sense of what questions we could answer about how change happens on the most local level. There is a lot of interesting data in here, but this post will focus on the North Brooklyn waterfront development.</p>
 <p>I began by creating a dataset with all 110 meetings, 1,254 votes, and 1,369 speakers. The following analysis will focus on only the 97 meetings where the term ‘waterfront’ appears.</p>
-<div id="f5573757-3ce9-4936-9c44-5c1c3c03aa15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:24:31.448553Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:24:31.448424Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:24:31.577703Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:24:31.577268Z&quot;}}" data-execution_count="2">
+<div id="f5573757-3ce9-4936-9c44-5c1c3c03aa15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T17:52:06.784664Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T17:52:06.784552Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T17:52:06.914639Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T17:52:06.914095Z&quot;}}" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2280,7 +2280,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <section id="what-does-the-board-actually-fight-about" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-the-board-actually-fight-about">What does the board actually fight about?</h2>
 <p>Next I wanted to get a sense of what goes on in these meetings. Do these board meetings ever have contested votes? If so, when - and over what?</p>
-<div id="aaa7cc2d-9d44-4a73-ab34-88d3e29651e9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:24:31.579291Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:24:31.579175Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:24:31.665655Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:24:31.665257Z&quot;}}" data-execution_count="3">
+<div id="aaa7cc2d-9d44-4a73-ab34-88d3e29651e9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T17:52:06.915979Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T17:52:06.915889Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T17:52:07.002320Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T17:52:07.001896Z&quot;}}" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2290,7 +2290,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </div>
 </div>
 <p>So clearly votes on parks and environment are not drawing debate. It seems like the real debates happen in these land use votes.</p>
-<div id="2bb82aea-8445-4200-bfd5-acf0af21efdd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:24:31.666825Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:24:31.666743Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:24:31.764276Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:24:31.763824Z&quot;}}" data-execution_count="4">
+<div id="2bb82aea-8445-4200-bfd5-acf0af21efdd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T17:52:07.003411Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T17:52:07.003334Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T17:52:07.100233Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T17:52:07.099821Z&quot;}}" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2305,346 +2305,262 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <section id="showing-up---at-the-mic-and-in-writing" class="level2">
 <h2 class="anchored" data-anchor-id="showing-up---at-the-mic-and-in-writing">Showing up - at the mic and in writing</h2>
 <p>Next I took a look at these votes considering timeline and community involvement. The reality becomes more clear - land use votes are where the confrontation really takes place. A land use vote is where the board weighs in on whether a real-estate development gets built or the land is opened up to the community.</p>
-<div id="996d82aa-14cc-4124-ac5e-60e8c9bc289a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:24:31.765571Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:24:31.765480Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:24:31.784162Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:24:31.783779Z&quot;}}" data-execution_count="5">
+<div id="996d82aa-14cc-4124-ac5e-60e8c9bc289a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T17:52:07.101455Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T17:52:07.101356Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T17:52:07.121749Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T17:52:07.121368Z&quot;}}" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<details><summary><strong>The 26 votes behind the chart</strong> (click to expand)</summary>
+<table class="dataframe table table-sm table-striped caption-top small">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">date</th>
-<th data-quarto-table-cell-role="th">topic_category</th>
-<th data-quarto-table-cell-role="th">kind</th>
-<th data-quarto-table-cell-role="th">yes</th>
-<th data-quarto-table-cell-role="th">no</th>
-<th data-quarto-table-cell-role="th">abstain</th>
-<th data-quarto-table-cell-role="th">num_conditions_attached</th>
-<th data-quarto-table-cell-role="th">division</th>
-<th data-quarto-table-cell-role="th">spk90</th>
+<th data-quarto-table-cell-role="th">Meeting</th>
+<th data-quarto-table-cell-role="th">Motion</th>
+<th data-quarto-table-cell-role="th">Type</th>
+<th data-quarto-table-cell-role="th">Vote (yes-no-abstain)</th>
+<th data-quarto-table-cell-role="th">Board division</th>
+<th data-quarto-table-cell-role="th">Conditions attached</th>
+<th data-quarto-table-cell-role="th">Speakers, prior 90 days</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>2016-06-14</td>
-<td>parks</td>
+<td>Jun 2016</td>
+<td>Motion to have the Parks Department move forward with the Bu...</td>
 <td>advocacy</td>
-<td>39</td>
+<td>39-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>2019-06-11</td>
-<td>environment</td>
+<td>Jun 2019</td>
+<td>Send a letter to the Parks Department and EDC requesting air...</td>
 <td>advocacy</td>
-<td>36</td>
+<td>36-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>2019-11-12</td>
-<td>parks</td>
+<td>Nov 2019</td>
+<td>Motion to send a letter of support for the Friends of Bushwi...</td>
 <td>advocacy</td>
-<td>38</td>
+<td>38-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>2020-02-11</td>
-<td>parks</td>
+<td>Feb 2020</td>
+<td>Motion to support the committee&#39;s recommendation to reject t...</td>
 <td>application</td>
-<td>33</td>
-<td>0</td>
-<td>0</td>
+<td>33-0-0</td>
+<td>0%</td>
 <td>6</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>2020-06-24</td>
-<td>parks</td>
+<td>Jun 2020</td>
+<td>Approval of the Parks &amp; Waterfront Committee&#39;s Report RE: Re...</td>
 <td>application</td>
-<td>28</td>
+<td>28-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">5</th>
-<td>2020-10-13</td>
-<td>parks</td>
+<td>Oct 2020</td>
+<td>Motion to send a letter requesting that the Parks Department...</td>
 <td>advocacy</td>
-<td>29</td>
+<td>29-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>2</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">6</th>
-<td>2021-01-12</td>
-<td>parks</td>
+<td>Jan 2021</td>
+<td>Support the Parks &amp; Waterfront Committee recommendation rega...</td>
 <td>application</td>
-<td>47</td>
-<td>0</td>
-<td>0</td>
+<td>47-0-0</td>
+<td>0%</td>
 <td>1</td>
-<td>0.000000</td>
 <td>11</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">7</th>
-<td>2021-01-12</td>
-<td>parks</td>
+<td>Jan 2021</td>
+<td>Support the Parks &amp; Waterfront Committee recommendation rega...</td>
 <td>advocacy</td>
-<td>47</td>
-<td>0</td>
-<td>0</td>
+<td>47-0-0</td>
+<td>0%</td>
 <td>1</td>
-<td>0.000000</td>
 <td>11</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">8</th>
-<td>2021-02-09</td>
-<td>parks</td>
+<td>Feb 2021</td>
+<td>Send letter to NYS Parks and state elected officials regardi...</td>
 <td>advocacy</td>
-<td>30</td>
+<td>30-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>12</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">9</th>
-<td>2021-03-09</td>
-<td>parks</td>
+<td>Mar 2021</td>
+<td>Support the Parks &amp; Waterfront Committee&#39;s amended resolutio...</td>
 <td>application</td>
-<td>30</td>
-<td>0</td>
-<td>0</td>
+<td>30-0-0</td>
+<td>0%</td>
 <td>4</td>
-<td>0.000000</td>
 <td>19</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">10</th>
-<td>2021-04-13</td>
-<td>land_use</td>
+<td>Apr 2021</td>
+<td>Two Trees – River Ring recommendations to be sent to the Dep...</td>
 <td>application</td>
-<td>21</td>
+<td>21-0-8</td>
+<td>28%</td>
 <td>0</td>
-<td>8</td>
-<td>0</td>
-<td>0.275862</td>
 <td>8</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">11</th>
-<td>2021-07-12</td>
-<td>parks</td>
+<td>Jul 2021</td>
+<td>Motion to add Community Board 1&#39;s name to a letter to Commis...</td>
 <td>advocacy</td>
-<td>30</td>
+<td>30-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>2</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">12</th>
-<td>2021-09-14</td>
-<td>land_use</td>
+<td>Sep 2021</td>
+<td>Support the recommendation to vote YES WITH THE COMMITTEE&#39;S...</td>
 <td>application</td>
-<td>29</td>
+<td>20-15-1</td>
+<td>44%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>35</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">13</th>
-<td>2021-09-14</td>
-<td>parks</td>
+<td>Sep 2021</td>
+<td>Support the committee&#39;s recommendation to vote NO WITH CONDI...</td>
+<td>application</td>
+<td>15-20-1</td>
+<td>44%</td>
+<td>0</td>
+<td>35</td>
+</tr>
+<tr class="odd">
+<td>Sep 2021</td>
+<td>Approve with conditions the 79 Quay Street application (C 21...</td>
+<td>application</td>
+<td>29-0-0</td>
+<td>0%</td>
+<td>0</td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td>Sep 2021</td>
+<td>Send letter to OMB about moving funding forward for Bushwick...</td>
 <td>advocacy</td>
-<td>32</td>
-<td>0</td>
-<td>0</td>
+<td>32-0-0</td>
+<td>0%</td>
 <td>1</td>
-<td>0.000000</td>
 <td>35</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">14</th>
-<td>2021-09-14</td>
-<td>land_use</td>
+<td>Feb 2024</td>
+<td>To recommend approval of DEP&#39;s Gateway to Greenpoint Open Sp...</td>
 <td>application</td>
-<td>15</td>
-<td>20</td>
-<td>1</td>
-<td>0</td>
-<td>0.444444</td>
-<td>35</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">15</th>
-<td>2021-09-14</td>
-<td>land_use</td>
-<td>application</td>
-<td>20</td>
-<td>15</td>
-<td>1</td>
-<td>0</td>
-<td>0.444444</td>
-<td>35</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">16</th>
-<td>2024-02-13</td>
-<td>parks</td>
-<td>application</td>
+<td>6-0-0</td>
+<td>0%</td>
 <td>6</td>
-<td>0</td>
-<td>0</td>
-<td>6</td>
-<td>0.000000</td>
 <td>1</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">17</th>
-<td>2024-04-09</td>
-<td>parks</td>
+<td>Apr 2024</td>
+<td>Parks &amp; Waterfront Committee requested a motion to send a le...</td>
 <td>advocacy</td>
-<td>28</td>
+<td>28-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>1</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">18</th>
-<td>2024-06-18</td>
-<td>parks</td>
+<td>Jun 2024</td>
+<td>To send a letter to our Council Member Jennifer Gutierrez, t...</td>
 <td>advocacy</td>
-<td>31</td>
+<td>31-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">19</th>
-<td>2025-04-08</td>
-<td>land_use</td>
+<td>Apr 2025</td>
+<td>To recommend the board submit comments as written in the com...</td>
 <td>application</td>
-<td>29</td>
+<td>29-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">20</th>
-<td>2025-06-10</td>
-<td>land_use</td>
+<td>Jun 2025</td>
+<td>Approve with the condition that the applicant expeditiously...</td>
 <td>application</td>
-<td>39</td>
-<td>0</td>
-<td>0</td>
+<td>39-0-0</td>
+<td>0%</td>
 <td>2</td>
-<td>0.000000</td>
 <td>30</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">21</th>
-<td>2025-09-09</td>
-<td>land_use</td>
+<td>Sep 2025</td>
+<td>To Approve APPLICATION C250033MMK, CEQR 25DCP010K, PROJECT:...</td>
 <td>application</td>
-<td>37</td>
+<td>37-0-0</td>
+<td>0%</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">22</th>
-<td>2026-02-10</td>
-<td>land_use</td>
+<td>Feb 2026</td>
+<td>To deny application 56 QUAY DEMAPPING: APPLICATION # 250326M...</td>
 <td>application</td>
-<td>12</td>
-<td>20</td>
+<td>30-1-0</td>
+<td>3%</td>
 <td>0</td>
-<td>15</td>
-<td>0.375000</td>
 <td>37</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">23</th>
-<td>2026-02-10</td>
-<td>land_use</td>
+<td>Feb 2026</td>
+<td>To deny application MONITOR POINT: APPLICATION # C260105ZMK,...</td>
 <td>application</td>
-<td>24</td>
-<td>9</td>
-<td>0</td>
+<td>12-20-0</td>
+<td>38%</td>
 <td>15</td>
-<td>0.272727</td>
 <td>37</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">24</th>
-<td>2026-02-10</td>
-<td>land_use</td>
+<td>Feb 2026</td>
+<td>To approve application MONITOR POINT: APPLICATION # C260105Z...</td>
 <td>application</td>
-<td>30</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.032258</td>
+<td>24-9-0</td>
+<td>27%</td>
+<td>15</td>
 <td>37</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">25</th>
-<td>2026-06-09</td>
-<td>environment</td>
+<td>Jun 2026</td>
+<td>To recommend the board submit letters to National Grid, NYS...</td>
 <td>advocacy</td>
-<td>40</td>
-<td>1</td>
+<td>40-1-0</td>
+<td>2%</td>
 <td>0</td>
-<td>0</td>
-<td>0.024390</td>
 <td>0</td>
 </tr>
 </tbody>
 </table>
-
+</details>
 </div>
 </div>
-</div>
-<div id="6a080008-bd62-4551-9b16-cd80423d8edc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-20T02:24:32.923183Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-20T02:24:32.923108Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-20T02:24:33.124433Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-20T02:24:33.124031Z&quot;}}" data-execution_count="7">
+<div id="6a080008-bd62-4551-9b16-cd80423d8edc" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-07-21T17:52:08.387306Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-07-21T17:52:08.387231Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-07-21T17:52:08.592916Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-07-21T17:52:08.592457Z&quot;}}" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
